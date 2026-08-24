@@ -1,0 +1,762 @@
+{
+  "meta": {
+    "updated": "2026-08-23",
+    "guild": "Tier 1 Imports",
+    "guildId": "1302392670181916722",
+    "narrative": "https://github.com/dataterminals/grb-modding-knowledgebase/blob/main/reference/crowdfund-history.md",
+    "note": "Era 1 is a recovered floor, not a count. See the Gaps panel."
+  },
+  "systems": [
+    {
+      "id": 1,
+      "name": "Buy-in",
+      "period": "2024-11 → 2025-07",
+      "channel": "#crowdfund-projects-legacy · #crowdfund-votes",
+      "optIn": "Vote in #crowdfund-votes, or DM the modder",
+      "price": "Variable — a share of the modder's commission ($5–$10+), with a minimum head-count",
+      "access": "Manual — a modder adds you to the channel",
+      "channels": "One project channel (a confirmation channel appears by mid-2025)",
+      "roles": "None",
+      "tier": "\"Tier 1 Armory\", later \"Tier 2\"",
+      "recovered": 23,
+      "complete": false
+    },
+    {
+      "id": 2,
+      "name": "Smiley's way",
+      "period": "2025-07-29 → present",
+      "channel": "#crowdfund-projects",
+      "optIn": "React 👍 on the announcement post",
+      "price": "Flat $10 minimum, more accepted",
+      "access": "Automated reaction-roles via T1 Carl",
+      "channels": "Two — #<name> (unconfirmed) → #<name>-confirmed",
+      "roles": "<Name> unconfirmed → <Name>, both public on your profile",
+      "tier": "Supporter (renamed from Tier 2, 2026-03-24)",
+      "recovered": 32,
+      "complete": true
+    }
+  ],
+  "crowdfunds": [
+    {
+      "n": 1,
+      "era": 1,
+      "date": "2024-11-01",
+      "approx": true,
+      "name": "Night War Ghost",
+      "creator": "YourMomsChestHair",
+      "announced": "chat",
+      "release": "public",
+      "note": "First completed crowdfund. Released to Nexus (mod 1090).",
+      "src": "1310097291587223553"
+    },
+    {
+      "n": 2,
+      "era": 1,
+      "date": "2024-11-17",
+      "name": "Alex \"Echo 3-1\" gear pack",
+      "creator": "YourMomsChestHair",
+      "announced": "chat",
+      "note": "CoD MW19 character kit.",
+      "src": "1307805326631768124"
+    },
+    {
+      "n": 3,
+      "era": 1,
+      "date": "2024-11-23",
+      "name": null,
+      "creator": "SB-4",
+      "announced": "chat",
+      "src": "1309770589795520592"
+    },
+    {
+      "n": 4,
+      "era": 1,
+      "date": "2024-12-02",
+      "name": "Shadow Company Heavy Outfit",
+      "creator": null,
+      "announced": "chat",
+      "note": "$10 buy-in. The post that threatened kicks for non-payment.",
+      "src": "1313256555994681406"
+    },
+    {
+      "n": 5,
+      "era": 1,
+      "date": "2024-12-01",
+      "approx": true,
+      "name": "Price Ghillie",
+      "creator": null,
+      "announced": "chat",
+      "src": "1318754880512327691"
+    },
+    {
+      "n": 6,
+      "era": 1,
+      "date": "2024-12-01",
+      "approx": true,
+      "name": "GZW assortment",
+      "creator": null,
+      "announced": "chat",
+      "release": "private",
+      "note": "Stayed private over asset copyright.",
+      "src": "1349505166176555060"
+    },
+    {
+      "n": 7,
+      "era": 1,
+      "date": "2024-12-11",
+      "name": null,
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "note": "\"a new weapon\" — never named again.",
+      "src": "1316621603978874991"
+    },
+    {
+      "n": 8,
+      "era": 1,
+      "date": "2024-12-16",
+      "name": null,
+      "creator": "FlawlyBoy",
+      "announced": "everyone",
+      "note": "\"a new gear pack\".",
+      "src": "1316829668674109511"
+    },
+    {
+      "n": 9,
+      "era": 1,
+      "date": "2024-12-29",
+      "name": "Daniel Defense DDM4V7",
+      "creator": "506427314301566976",
+      "announced": "everyone",
+      "src": "1322878300007174144"
+    },
+    {
+      "n": 10,
+      "era": 1,
+      "date": "2025-01-14",
+      "name": "Shadow Rusher outfit",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "src": "1328857878152613940"
+    },
+    {
+      "n": 11,
+      "era": 1,
+      "date": "2025-01-21",
+      "name": "Chimera Bridge",
+      "creator": "506427314301566976",
+      "announced": "everyone",
+      "src": "1331300784599728188"
+    },
+    {
+      "n": 12,
+      "era": 1,
+      "date": "2025-03-01",
+      "approx": true,
+      "name": "SC Wolves / Wolves Overhaul",
+      "creator": null,
+      "announced": "chat",
+      "note": "May be the same project as #10 — flagged, unresolved.",
+      "src": "1347339972801466430"
+    },
+    {
+      "n": 13,
+      "era": 1,
+      "date": "2025-03-12",
+      "name": "MCX Raptor",
+      "creator": "335527074079047680",
+      "announced": "everyone",
+      "src": "1349440792007278703"
+    },
+    {
+      "n": 14,
+      "era": 1,
+      "date": "2025-03-29",
+      "name": "Australian SOF Vests",
+      "creator": "781897007043837952",
+      "announced": "everyone",
+      "src": "1355682150719951068"
+    },
+    {
+      "n": 15,
+      "era": 1,
+      "date": "2025-04-08",
+      "name": "Ferro Concepts Slickster Plate Carrier",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "src": "1359291748144119898"
+    },
+    {
+      "n": 16,
+      "era": 1,
+      "date": "2025-04-13",
+      "name": "Next Generation Ghost's Gear",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "src": "1360895696894693396"
+    },
+    {
+      "n": 17,
+      "era": 1,
+      "date": "2025-05-06",
+      "name": "Konni Group Outfits",
+      "creator": "779221619892813854",
+      "announced": "everyone",
+      "src": "1369345583709552750"
+    },
+    {
+      "n": 18,
+      "era": 1,
+      "date": "2025-05-08",
+      "name": "Kalashnikov SR1",
+      "creator": "Agent/07",
+      "announced": "everyone",
+      "src": "1370159031775268944"
+    },
+    {
+      "n": 19,
+      "era": 1,
+      "date": "2025-05-15",
+      "name": "\"Warfare\" movie outfits",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "src": "1372703221805481984"
+    },
+    {
+      "n": 20,
+      "era": 1,
+      "date": "2025-06-13",
+      "name": "BREN 3",
+      "creator": "335527074079047680",
+      "announced": "everyone",
+      "src": "1383200543043883179"
+    },
+    {
+      "n": 21,
+      "era": 1,
+      "date": "2025-06-19",
+      "name": "Haenel MK556",
+      "creator": "Agent/07",
+      "announced": "everyone",
+      "src": "1385507734392406037"
+    },
+    {
+      "n": 22,
+      "era": 1,
+      "date": "2025-07-05",
+      "name": "DS Arms SA 58 FAL",
+      "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
+      "announced": "everyone",
+      "note": "A renewal of an earlier project.",
+      "src": "1391022434211069993"
+    },
+    {
+      "n": 23,
+      "era": 1,
+      "date": "2025-07-08",
+      "name": "Commando Diving Drysuit",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "note": "Known in chat as \"Frogman\".",
+      "src": "1392009113185030288"
+    },
+    {
+      "n": 24,
+      "era": 2,
+      "date": "2025-07-29",
+      "name": "Vulcan/Malyuk 7.62 Assault Rifle",
+      "creator": "779221619892813854",
+      "announced": "everyone",
+      "note": "First post in the new #crowdfund-projects.",
+      "src": "1399642502708858933"
+    },
+    {
+      "n": 25,
+      "era": 2,
+      "date": "2025-08-14",
+      "name": "AKM w/ KPYK parts",
+      "creator": "Agent/07",
+      "announced": "everyone",
+      "src": "1405434369497108561"
+    },
+    {
+      "n": 26,
+      "era": 2,
+      "date": "2025-08-18",
+      "name": "White Moon",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "src": "1407147347590250516"
+    },
+    {
+      "n": 27,
+      "era": 2,
+      "date": "2025-09-17",
+      "name": "Snake Eater",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "vote": {
+        "total": 99,
+        "public": 59,
+        "supporters": 35,
+        "other": 5
+      },
+      "release": "public"
+    },
+    {
+      "n": 28,
+      "era": 2,
+      "date": "2025-09-23",
+      "name": null,
+      "creator": "Agent/07",
+      "announced": "everyone",
+      "note": "\"Agent, back at it again\" — post deleted, name lost.",
+      "src": "1420063369313910785"
+    },
+    {
+      "n": 29,
+      "era": 2,
+      "date": "2025-10-13",
+      "name": "Operation Mother's Chest Hair",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "vote": {
+        "total": 144,
+        "public": 97,
+        "supporters": 47
+      },
+      "release": "public"
+    },
+    {
+      "n": 30,
+      "era": 2,
+      "date": "2025-11-07",
+      "name": "Crowd Control",
+      "creator": "MercerBlack™",
+      "announced": "everyone",
+      "note": "Mercer's debut crowdfund.",
+      "vote": {
+        "total": 54,
+        "public": 22,
+        "supporters": 32
+      },
+      "release": "supporters"
+    },
+    {
+      "n": 31,
+      "era": 2,
+      "date": "2025-11-09",
+      "name": "Enfield Tea Set",
+      "creator": null,
+      "announced": "everyone",
+      "vote": {
+        "total": 55,
+        "public": 42,
+        "supporters": 13
+      },
+      "release": "public"
+    },
+    {
+      "n": 32,
+      "era": 2,
+      "date": "2025-11-19",
+      "name": "Bad Boys",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "vote": {
+        "total": 72,
+        "public": 32,
+        "supporters": 40
+      },
+      "release": "supporters"
+    },
+    {
+      "n": 33,
+      "era": 2,
+      "date": "2025-11-21",
+      "name": "Dual Sig",
+      "creator": null,
+      "announced": "everyone",
+      "vote": {
+        "total": 61,
+        "public": 22,
+        "supporters": 39
+      },
+      "release": "supporters"
+    },
+    {
+      "n": 34,
+      "era": 2,
+      "date": "2025-12-15",
+      "approx": true,
+      "name": "Door Kicker",
+      "creator": null,
+      "announced": "everyone",
+      "vote": {
+        "total": 48,
+        "public": 17,
+        "supporters": 31
+      },
+      "release": "supporters"
+    },
+    {
+      "n": 35,
+      "era": 2,
+      "date": "2025-12-17",
+      "name": "Lioness",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "note": "Largest measured turnout, and the closest vote — 11 votes in it.",
+      "vote": {
+        "total": 275,
+        "public": 132,
+        "supporters": 143
+      },
+      "release": "supporters"
+    },
+    {
+      "n": 36,
+      "era": 2,
+      "date": "2025-12-20",
+      "approx": true,
+      "name": "Kill Confirmed",
+      "creator": "ViruS",
+      "announced": "everyone",
+      "vote": {
+        "total": 58,
+        "public": 27,
+        "supporters": 31
+      },
+      "release": "supporters"
+    },
+    {
+      "n": 37,
+      "era": 2,
+      "date": "2026-01-06",
+      "name": "Ahead of Your Time",
+      "creator": "SAMI TECH SUPUMA",
+      "announced": "everyone",
+      "vote": {
+        "total": 103,
+        "public": 43,
+        "supporters": 60
+      },
+      "release": "supporters"
+    },
+    {
+      "n": 38,
+      "era": 2,
+      "date": "2026-01-18",
+      "name": "Tip of the Spear",
+      "creator": "Acosta.",
+      "announced": "everyone",
+      "vote": {
+        "total": 149,
+        "public": 84,
+        "supporters": 65
+      },
+      "release": "public"
+    },
+    {
+      "n": 39,
+      "era": 2,
+      "date": "2026-01-30",
+      "name": null,
+      "creator": "MercerBlack™",
+      "announced": "everyone",
+      "note": "Announced with a South African flag. Name lost.",
+      "src": "1466653752671998073"
+    },
+    {
+      "n": 40,
+      "era": 2,
+      "date": "2026-02-11",
+      "name": null,
+      "creator": null,
+      "announced": "everyone",
+      "src": "1471150705279635664"
+    },
+    {
+      "n": 41,
+      "era": 2,
+      "date": "2026-02-17",
+      "name": null,
+      "creator": null,
+      "announced": "everyone",
+      "note": "\"Time for some cold pasta.\"",
+      "src": "1473153883223097385"
+    },
+    {
+      "n": 42,
+      "era": 2,
+      "date": "2026-02-23",
+      "name": null,
+      "creator": null,
+      "announced": "everyone",
+      "src": "1475620200865861703"
+    },
+    {
+      "n": 43,
+      "era": 2,
+      "date": "2026-02-27",
+      "name": "Crye Baby",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "note": "Name recovered from the announcement graphic.",
+      "src": "1477053851323596881"
+    },
+    {
+      "n": 44,
+      "era": 2,
+      "date": "2026-03-27",
+      "name": "Spirited Away",
+      "creator": null,
+      "announced": "everyone",
+      "note": "Name read off the title card.",
+      "src": "1486926842483966024"
+    },
+    {
+      "n": 45,
+      "era": 2,
+      "date": "2026-03-31",
+      "name": "Wolf Pack",
+      "creator": null,
+      "announced": "everyone",
+      "note": "Name read off the title card.",
+      "src": "1488686115144728666"
+    },
+    {
+      "n": 46,
+      "era": 2,
+      "date": "2026-04-07",
+      "name": null,
+      "creator": "MercerBlack™",
+      "announced": "everyone",
+      "note": "Title card shows an \"FW\" monogram; no legible name.",
+      "src": "1490990637577797753"
+    },
+    {
+      "n": 47,
+      "era": 2,
+      "date": "2026-04-12",
+      "name": "CYBERSAMI",
+      "creator": "SAMI TECH SUPUMA",
+      "announced": "everyone",
+      "live": true,
+      "signups": 197
+    },
+    {
+      "n": 48,
+      "era": 2,
+      "date": "2026-05-11",
+      "name": "Smokin Aces",
+      "creator": "keem",
+      "announced": "everyone",
+      "note": "Name confirmed by a matching #supporter-armory thread."
+    },
+    {
+      "n": 49,
+      "era": 2,
+      "date": "2026-05-15",
+      "name": "Breach & Clear",
+      "creator": null,
+      "announced": "everyone",
+      "note": "Name read off the title card."
+    },
+    {
+      "n": 50,
+      "era": 2,
+      "date": "2026-06-01",
+      "name": "Heavy Metal",
+      "creator": "MercerBlack™",
+      "announced": "everyone",
+      "live": true,
+      "signups": 172
+    },
+    {
+      "n": 51,
+      "era": 2,
+      "date": "2026-06-12",
+      "name": "Pastaslov",
+      "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
+      "announced": "everyone",
+      "live": true,
+      "signups": 131
+    },
+    {
+      "n": 52,
+      "era": 2,
+      "date": "2026-06-13",
+      "name": "Time 'n Tide",
+      "creator": "𝐵𝑂𝑁𝐹𝐼𝑅𝐸",
+      "announced": "everyone",
+      "note": "Name read off the title card."
+    },
+    {
+      "n": 53,
+      "era": 2,
+      "date": "2026-07-03",
+      "name": "Rangers Lead The Way",
+      "creator": "urmomschesthair",
+      "announced": "everyone",
+      "live": true,
+      "signups": 384,
+      "note": "Largest sign-up on record."
+    },
+    {
+      "n": 54,
+      "era": 2,
+      "date": "2026-07-11",
+      "name": "GWOT Classics",
+      "creator": "ViruS",
+      "announced": "everyone",
+      "live": true,
+      "signups": 317
+    },
+    {
+      "n": 55,
+      "era": 2,
+      "date": "2026-08-19",
+      "name": "Dealer's Choice",
+      "creator": "Avetis",
+      "announced": "everyone",
+      "live": true,
+      "signups": 117
+    }
+  ],
+  "cohort": {
+    "asOf": "2026-08-23",
+    "basis": "Exact reactor lists for the 6 crowdfunds live on this date, with the T1 Carl bot removed.",
+    "distinct": 812,
+    "signups": 1318,
+    "buckets": [
+      {
+        "label": "1 of 6",
+        "people": 551
+      },
+      {
+        "label": "2 of 6",
+        "people": 138
+      },
+      {
+        "label": "3 of 6",
+        "people": 59
+      },
+      {
+        "label": "4 of 6",
+        "people": 20
+      },
+      {
+        "label": "5 of 6",
+        "people": 30
+      },
+      {
+        "label": "6 of 6",
+        "people": 14
+      }
+    ],
+    "pairwise": [
+      {
+        "a": "CYBERSAMI",
+        "b": "HEAVY METAL",
+        "shared": 53
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Pastaslov",
+        "shared": 47
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Rangers Lead The Way",
+        "shared": 68
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "GWOT Classics",
+        "shared": 51
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Dealer's Choice",
+        "shared": 28
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Pastaslov",
+        "shared": 66
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Rangers Lead The Way",
+        "shared": 76
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "GWOT Classics",
+        "shared": 64
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Dealer's Choice",
+        "shared": 32
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Rangers Lead The Way",
+        "shared": 89
+      },
+      {
+        "a": "Pastaslov",
+        "b": "GWOT Classics",
+        "shared": 68
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Dealer's Choice",
+        "shared": 36
+      },
+      {
+        "a": "Rangers Lead The Way",
+        "b": "GWOT Classics",
+        "shared": 143
+      },
+      {
+        "a": "Rangers Lead The Way",
+        "b": "Dealer's Choice",
+        "shared": 59
+      },
+      {
+        "a": "GWOT Classics",
+        "b": "Dealer's Choice",
+        "shared": 65
+      }
+    ],
+    "newBlood": {
+      "crowdfund": "Dealer's Choice",
+      "fresh": 37,
+      "of": 117
+    }
+  },
+  "gaps": [
+    {
+      "title": "#crowdfund-projects does not keep its history",
+      "body": "The board holds only six posts, the oldest from 2026-04-12. Everything older is gone: paging back with before= and jumping with around= both return nothing, and about 20 @everyone posts still link to crowdfund posts that no longer exist. Whether posts are removed as projects close or were purged once in a cleanup is not established — two of the six are months past their end date and still up."
+    },
+    {
+      "title": "Sign-up counts survive only for live crowdfunds",
+      "body": "For the 49 crowdfunds no longer on the board the 👍 commitment count is gone permanently. The six figures here are a snapshot of what is still posted, not a history."
+    },
+    {
+      "title": "Eight Era 2 crowdfunds cannot be named",
+      "body": "Their date and often their creator are solid; the name died with the post. Anyone holding those roles could name them instantly — the role name is the crowdfund name."
+    },
+    {
+      "title": "Era 1 has no reliable count",
+      "body": "#crowdfund-projects-legacy and #crowdfund-votes both return forbidden, as do individual Era 1 project channels. The 23 listed were reconstructed from public chat; six of them surfaced only because someone mentioned them in passing. The true figure is higher."
+    },
+    {
+      "title": "Role membership is not readable",
+      "body": "Discord does not expose role-member counts to a normal account. Turnout bounds paid membership from below — it does not measure it."
+    }
+  ]
+}
