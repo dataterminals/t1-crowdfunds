@@ -750,40 +750,5 @@
       "fresh": 37,
       "of": 117
     }
-  },
-  "origin": {
-    "predecessor": "The Bivouac",
-    "guildId": "981599102523539466",
-    "founded": "2022-06",
-    "body": "Tier 1 Imports was founded 2024-11-02. The Bivouac — a Ghost Recon: Breakpoint modding community running since mid-2022 — was where much of its early membership already was, and the two servers are directly linked in the record.",
-    "facts": [
-      {
-        "date": "2024-11-02",
-        "text": "Tier 1 Imports is created. On day one its founder describes the plan: “my idea for this server was to have this be a storefront of sorts for crowdfunding mod projects.”",
-        "src": "1302414873325604945"
-      },
-      {
-        "date": "2024-11-06",
-        "text": "The Bivouac’s ownership transfers to Sixthburrito. The announcement names no outgoing owner and signals no conflict.",
-        "src": "1303731106599796817"
-      },
-      {
-        "date": "2024-11-08",
-        "text": "McC00CHIEMAN posts in The Bivouac: “I’m the co-creator of Tier 1 Imports”, with an invite link. He is not removed for it.",
-        "src": "1304532626023120966"
-      },
-      {
-        "date": "2024-11-23",
-        "text": "ViruS, from inside The Bivouac, routes people to Tier 1 for crowdfunds: “check nexusmods, put up a comission here, or make a request for a crowdfund mod … over at the tier1 server.”",
-        "src": "1309919966497214525"
-      },
-      {
-        "date": "2026-05-11",
-        "text": "“Just go to Tier 1 Imports server, this one is dead.” The Bivouac still exists but is largely inactive.",
-        "src": "1503318552331948113"
-      }
-    ],
-    "contrast": "The clearest structural difference is the funding model, and it is visible in the channel lists. The Bivouac runs commissions — #request-commission, #commission-guidelines — where one person pays one modder for one job. Tier 1's premise was to split that cost across many people. That is what a crowdfund is, and it is what the server was built for on day one.",
-    "unresolved": "Whether Tier 1 was a deliberate split from The Bivouac is not established. The founding, the ownership handover and the open recruitment fall within a week of each other, but no message states a cause — and the recruitment being public and tolerated argues against an acrimonious break."
   }
 }
