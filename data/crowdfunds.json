@@ -6,36 +6,6 @@
     "narrative": "https://github.com/dataterminals/grb-modding-knowledgebase/blob/main/reference/crowdfund-history.md",
     "note": "Era 1 is a recovered floor, not a count. See the Gaps panel."
   },
-  "systems": [
-    {
-      "id": 1,
-      "name": "Buy-in",
-      "period": "2024-11 → 2025-07",
-      "channel": "#crowdfund-projects-legacy · #crowdfund-votes",
-      "optIn": "Vote in #crowdfund-votes, or DM the modder",
-      "price": "Variable — a share of the modder's commission ($5–$10+), with a minimum head-count",
-      "access": "Manual — a modder adds you to the channel",
-      "channels": "One project channel (a confirmation channel appears by mid-2025)",
-      "roles": "None",
-      "tier": "\"Tier 1 Armory\", later \"Tier 2\"",
-      "recovered": 23,
-      "complete": false
-    },
-    {
-      "id": 2,
-      "name": "Smiley's way",
-      "period": "2025-07-29 → present",
-      "channel": "#crowdfund-projects",
-      "optIn": "React 👍 on the announcement post",
-      "price": "Flat $10 minimum, more accepted",
-      "access": "Automated reaction-roles via T1 Carl",
-      "channels": "Two — #<name> (unconfirmed) → #<name>-confirmed",
-      "roles": "<Name> unconfirmed → <Name>, both public on your profile",
-      "tier": "Supporter (renamed from Tier 2, 2026-03-24)",
-      "recovered": 32,
-      "complete": true
-    }
-  ],
   "crowdfunds": [
     {
       "n": 1,
@@ -306,11 +276,11 @@
       "n": 28,
       "era": 2,
       "date": "2025-09-23",
-      "name": null,
+      "name": "Steyr",
       "creator": "Agent/07",
       "announced": "everyone",
-      "note": "\"Agent, back at it again\" — post deleted, name lost.",
-      "src": "1420063369313910785"
+      "note": "Named from outside: a Bivouac member listing what was live on 2025-09-24 — “the Metal Gear Solid/XOF and the Steyr Crowdfund”.",
+      "src": "1420518885261836368"
     },
     {
       "n": 29,
@@ -542,7 +512,13 @@
       "creator": "SAMI TECH SUPUMA",
       "announced": "everyone",
       "live": true,
-      "signups": 197
+      "signups": 197,
+      "items": [
+        "Cyberpunk Character.",
+        "Medical Mask.",
+        "Samurai Jacket.",
+        "5 panel street wear hat."
+      ]
     },
     {
       "n": 48,
@@ -570,7 +546,15 @@
       "creator": "MercerBlack™",
       "announced": "everyone",
       "live": true,
-      "signups": 172
+      "signups": 172,
+      "items": [
+        "Kawasaki 125cc Dirtbike",
+        "KTM 1390 Super Duke 2026",
+        "ZBL-08 Amphibious IFV Armored Vehicle",
+        "Light Armored Patrol Vehicle",
+        "Polaris Dagor A1",
+        "Military Snake Wrangler"
+      ]
     },
     {
       "n": 51,
@@ -580,7 +564,13 @@
       "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
       "announced": "everyone",
       "live": true,
-      "signups": 131
+      "signups": 131,
+      "items": [
+        "THOR NFM Plate Carrier",
+        "VZ58 Sporter",
+        "CZ P-09 C NOCTURNE",
+        "A full Military Uniform"
+      ]
     },
     {
       "n": 52,
@@ -600,7 +590,15 @@
       "announced": "everyone",
       "live": true,
       "signups": 384,
-      "note": "Largest sign-up on record."
+      "note": "Largest sign-up on record.",
+      "items": [
+        "Patagonia L9 Field Shirt Jacket",
+        "Patagonia L9 Combat Pants",
+        "Crye AVS",
+        "Paltatac Opscore V3 Helmet Cover",
+        "Haley Strategic Gustaf Bag Pack",
+        "Viper Ghillie Hood"
+      ]
     },
     {
       "n": 54,
@@ -610,7 +608,13 @@
       "creator": "ViruS",
       "announced": "everyone",
       "live": true,
-      "signups": 317
+      "signups": 317,
+      "items": [
+        "M4A1 Block II",
+        "MK12 SPR",
+        "M2010 Sniper Rifle",
+        "Kimber Custom TLE RL II 1911 and SureFire X300U-B"
+      ]
     },
     {
       "n": 55,
@@ -620,7 +624,17 @@
       "creator": "Avetis",
       "announced": "everyone",
       "live": true,
-      "signups": 117
+      "signups": 117,
+      "items": [
+        "LR308",
+        "SRSA2",
+        "Canik TP9 Elite Combat",
+        "Colt IAR6940",
+        "MK14 MOD1 EBR",
+        "Fostech Origin-12",
+        "M240B",
+        "FN P90"
+      ]
     }
   ],
   "cohort": {
@@ -737,26 +751,39 @@
       "of": 117
     }
   },
-  "gaps": [
-    {
-      "title": "#crowdfund-projects does not keep its history",
-      "body": "The board holds only six posts, the oldest from 2026-04-12. Everything older is gone: paging back with before= and jumping with around= both return nothing, and about 20 @everyone posts still link to crowdfund posts that no longer exist. Whether posts are removed as projects close or were purged once in a cleanup is not established — two of the six are months past their end date and still up."
-    },
-    {
-      "title": "Sign-up counts survive only for live crowdfunds",
-      "body": "For the 49 crowdfunds no longer on the board the 👍 commitment count is gone permanently. The six figures here are a snapshot of what is still posted, not a history."
-    },
-    {
-      "title": "Eight Era 2 crowdfunds cannot be named",
-      "body": "Their date and often their creator are solid; the name died with the post. Anyone holding those roles could name them instantly — the role name is the crowdfund name."
-    },
-    {
-      "title": "Era 1 has no reliable count",
-      "body": "#crowdfund-projects-legacy and #crowdfund-votes both return forbidden, as do individual Era 1 project channels. The 23 listed were reconstructed from public chat; six of them surfaced only because someone mentioned them in passing. The true figure is higher."
-    },
-    {
-      "title": "Role membership is not readable",
-      "body": "Discord does not expose role-member counts to a normal account. Turnout bounds paid membership from below — it does not measure it."
-    }
-  ]
+  "origin": {
+    "predecessor": "The Bivouac",
+    "guildId": "981599102523539466",
+    "founded": "2022-06",
+    "body": "Tier 1 Imports was founded 2024-11-02. The Bivouac — a Ghost Recon: Breakpoint modding community running since mid-2022 — was where much of its early membership already was, and the two servers are directly linked in the record.",
+    "facts": [
+      {
+        "date": "2024-11-02",
+        "text": "Tier 1 Imports is created. On day one its founder describes the plan: “my idea for this server was to have this be a storefront of sorts for crowdfunding mod projects.”",
+        "src": "1302414873325604945"
+      },
+      {
+        "date": "2024-11-06",
+        "text": "The Bivouac’s ownership transfers to Sixthburrito. The announcement names no outgoing owner and signals no conflict.",
+        "src": "1303731106599796817"
+      },
+      {
+        "date": "2024-11-08",
+        "text": "McC00CHIEMAN posts in The Bivouac: “I’m the co-creator of Tier 1 Imports”, with an invite link. He is not removed for it.",
+        "src": "1304532626023120966"
+      },
+      {
+        "date": "2024-11-23",
+        "text": "ViruS, from inside The Bivouac, routes people to Tier 1 for crowdfunds: “check nexusmods, put up a comission here, or make a request for a crowdfund mod … over at the tier1 server.”",
+        "src": "1309919966497214525"
+      },
+      {
+        "date": "2026-05-11",
+        "text": "“Just go to Tier 1 Imports server, this one is dead.” The Bivouac still exists but is largely inactive.",
+        "src": "1503318552331948113"
+      }
+    ],
+    "contrast": "The clearest structural difference is the funding model, and it is visible in the channel lists. The Bivouac runs commissions — #request-commission, #commission-guidelines — where one person pays one modder for one job. Tier 1's premise was to split that cost across many people. That is what a crowdfund is, and it is what the server was built for on day one.",
+    "unresolved": "Whether Tier 1 was a deliberate split from The Bivouac is not established. The founding, the ownership handover and the open recruitment fall within a week of each other, but no message states a cause — and the recruitment being public and tolerated argues against an acrimonious break."
+  }
 }

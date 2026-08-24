@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>T1 Crowdfund Registry</title>
-<meta name="description" content="Every crowdfund Tier 1 Imports has run, across both funding systems — a live registry with turnout, backer overlap and provenance.">
+<meta name="description" content="Every crowdfund Tier 1 Imports has run — a live registry with sign-ups, release-vote turnout, backer overlap and provenance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
    ─────────────────────────────────────────────────────────────── */
 :root{
   --ground:#0B0B0C;
-  --plate:#141416;
   --plate-hi:#191A1C;
   --plate-lo:#101012;
   --edge-hi:rgba(255,255,255,.07);
@@ -28,12 +27,14 @@
   --ink-3:#6A655D;        /* muted */
   --steel:#B9B2A8;
 
-  --oxide:#C0392B;        /* validated categorical 1 */
-  --brass:#AE8726;        /* validated categorical 2 */
+  /* The two categorical hues. Chosen with a colourblind-separation
+     validator, not by eye: normal-vision ΔE 28.9, deuteranopia 20.8.
+     An earlier brass (#AE8726) passed the floor at ΔE 17.7 and was still
+     too close to the red to read at a glance — reported from use. */
+  --oxide:#C0392B;
+  --ice:#3E92C4;
   --oxide-dim:#7E2A20;
-  --oxide-lo:#4A1710;
-
-  --grid:rgba(255,255,255,.055);
+  --ice-dim:#265B7C;
   --r:3px;
 }
 *{box-sizing:border-box}
@@ -48,20 +49,10 @@ body{
 }
 .wrap{max-width:1240px;margin:0 auto;padding:0 22px 90px}
 
-/* ── type ─────────────────────────────────────────────── */
-.mono{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
-.micro{font-family:'Michroma',var(--fallback),sans-serif}
-.tag{
-  font-size:10px;font-weight:600;letter-spacing:.30em;text-transform:uppercase;
-  color:var(--ink-3);
-}
-h2{
-  font-family:'Michroma',sans-serif;font-size:15px;letter-spacing:.10em;
-  text-transform:uppercase;color:var(--steel);margin:0;
-}
+.tag{font-size:10px;font-weight:600;letter-spacing:.30em;text-transform:uppercase;color:var(--ink-3)}
+h2{font-family:'Michroma',sans-serif;font-size:15px;letter-spacing:.10em;text-transform:uppercase;color:var(--steel);margin:0}
 .sub{color:var(--ink-2);font-size:13.5px;font-weight:300;letter-spacing:.02em;max-width:80ch}
 
-/* ── plates (the stamped-metal surface) ───────────────── */
 .plate{
   background:linear-gradient(180deg,var(--plate-hi),var(--plate-lo));
   border-top:1px solid var(--edge-hi);
@@ -69,13 +60,7 @@ h2{
   box-shadow:inset 0 1px 0 rgba(255,255,255,.045), 0 3px 14px rgba(0,0,0,.55);
   border-radius:var(--r);
 }
-.chamfer{
-  clip-path:polygon(15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%,0 15px);
-}
-.deboss{
-  color:#26262A;
-  text-shadow:0 1px 0 rgba(255,255,255,.085), 0 -1px 1px rgba(0,0,0,.65);
-}
+.chamfer{clip-path:polygon(15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%,0 15px)}
 
 /* ── masthead ─────────────────────────────────────────── */
 header{padding:54px 0 30px}
@@ -93,19 +78,12 @@ header{padding:54px 0 30px}
 }
 h1{
   font-family:'Michroma',sans-serif;margin:0;line-height:1.06;
-  font-size:clamp(24px,4.2vw,42px);letter-spacing:.02em;
-  color:#CFC9BE;
+  font-size:clamp(24px,4.2vw,42px);letter-spacing:.02em;color:#CFC9BE;
   text-shadow:0 1px 0 rgba(255,255,255,.10),0 2px 3px rgba(0,0,0,.8);
 }
 h1 em{font-style:normal;color:var(--oxide)}
-.rule{
-  height:2px;margin:26px 0 0;
-  background:linear-gradient(90deg,var(--oxide) 0 96px,rgba(255,255,255,.10) 96px 100%);
-}
-.stamp{
-  display:inline-flex;align-items:center;gap:9px;margin-top:12px;
-  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);
-}
+.rule{height:2px;margin:26px 0 0;background:linear-gradient(90deg,var(--oxide) 0 96px,rgba(255,255,255,.10) 96px 100%)}
+.stamp{display:inline-flex;align-items:center;gap:9px;margin-top:12px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3)}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--oxide);box-shadow:0 0 9px var(--oxide)}
 
 /* ── KPI row ──────────────────────────────────────────── */
@@ -122,22 +100,18 @@ section{margin-top:52px}
 .head .num{font-family:'Michroma',sans-serif;font-size:11px;color:var(--oxide);letter-spacing:.14em}
 .body-gap{margin-top:20px}
 
-/* ── two systems ──────────────────────────────────────── */
-.systems{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
-.sys{padding:22px}
-.sys h3{
-  font-family:'Michroma',sans-serif;font-size:16px;margin:0 0 2px;letter-spacing:.03em;color:var(--ink);
-}
-.sys .per{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--oxide);margin-bottom:16px}
-.sys.two .per{color:var(--brass)}
-.spec{display:grid;grid-template-columns:104px 1fr;gap:7px 14px;font-size:13px}
-.spec dt{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);padding-top:3px}
-.spec dd{margin:0;color:var(--ink-2);font-weight:300}
-.sys .count{
-  margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.07);
-  font-size:12px;color:var(--ink-3)
-}
-.sys .count b{font-family:'Michroma',sans-serif;font-size:19px;color:var(--ink);display:block;margin-bottom:3px}
+/* ── the board ────────────────────────────────────────── */
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.bd{padding:20px;display:flex;flex-direction:column}
+.bd h3{font-family:'Michroma',sans-serif;font-size:15px;margin:0 0 3px;color:var(--ink);letter-spacing:.02em;line-height:1.25}
+.bd .by{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.bd .by b{color:var(--ice);font-weight:600}
+.bd ul{margin:0 0 16px;padding:0;list-style:none;font-size:12.5px;color:var(--ink-2);font-weight:300}
+.bd li{padding:3px 0 3px 14px;position:relative}
+.bd li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;background:var(--oxide);opacity:.7}
+.bd .foot{margin-top:auto;padding-top:13px;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:baseline;gap:9px}
+.bd .foot b{font-family:'Michroma',sans-serif;font-size:22px;color:var(--ink)}
+.bd .foot span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
 
 /* ── charts ───────────────────────────────────────────── */
 .chart{padding:22px 20px 16px}
@@ -147,14 +121,11 @@ section{margin-top:52px}
 .row{display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px}
 .row .lab{font-size:12.5px;color:var(--ink-2);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .track{height:19px;background:rgba(255,255,255,.035);border-radius:2px;display:flex;overflow:hidden}
-.seg{height:100%;position:relative;display:flex;align-items:center;transition:filter .12s}
+.seg{height:100%;display:flex;align-items:center;transition:filter .12s}
 .seg:first-child{border-radius:2px 0 0 2px}
 .seg:last-child{border-radius:0 2px 2px 0}
-.seg + .seg{margin-left:2px}          /* 2px surface gap between fills */
-.seg b{
-  font-size:10.5px;font-weight:600;color:rgba(0,0,0,.62);padding:0 6px;
-  font-variant-numeric:tabular-nums
-}
+.seg + .seg{margin-left:2px}
+.seg b{font-size:10.5px;font-weight:600;color:rgba(0,0,0,.66);padding:0 6px;font-variant-numeric:tabular-nums}
 .row .tot{font-family:'Michroma',sans-serif;font-size:12.5px;color:var(--ink);text-align:right}
 .row:hover .seg{filter:brightness(1.22)}
 
@@ -162,18 +133,17 @@ section{margin-top:52px}
 .bk{display:grid;grid-template-columns:74px 1fr 92px;align-items:center;gap:12px}
 .bk .lab{font-size:12px;color:var(--ink-2);letter-spacing:.06em}
 .bk .bar{height:26px;border-radius:2px;display:flex;align-items:center;justify-content:flex-end;padding-right:9px;min-width:3px}
-.bk .bar b{font-family:'Michroma',sans-serif;font-size:12px;color:rgba(0,0,0,.68)}
+.bk .bar b{font-family:'Michroma',sans-serif;font-size:12px;color:rgba(0,0,0,.7)}
 .bk .pct{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
 
-/* cadence */
 .cadence{display:flex;align-items:flex-end;gap:3px;height:120px;padding-top:10px}
-.cad{flex:1;min-width:4px;background:var(--oxide-dim);border-radius:2px 2px 0 0;position:relative;transition:background .12s}
+.cad{flex:1;min-width:4px;background:var(--oxide-dim);border-radius:2px 2px 0 0;transition:background .12s}
 .cad:hover{background:var(--oxide)}
-.cad[data-era="1"]{background:#6E5518}
-.cad[data-era="1"]:hover{background:var(--brass)}
+.cad[data-era="1"]{background:var(--ice-dim)}
+.cad[data-era="1"]:hover{background:var(--ice)}
 .axis{display:flex;justify-content:space-between;font-size:10px;color:var(--ink-3);margin-top:8px;letter-spacing:.1em}
 
-/* ── registry table ───────────────────────────────────── */
+/* ── registry ─────────────────────────────────────────── */
 .filters{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
 .filters input,.filters select{
   background:#0E0E10;color:var(--ink);border:1px solid rgba(255,255,255,.10);
@@ -185,9 +155,8 @@ section{margin-top:52px}
 .tw{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px;min-width:760px}
 th{
-  text-align:left;font-size:9.5px;letter-spacing:.19em;text-transform:uppercase;
-  color:var(--ink-3);font-weight:600;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.11);
-  white-space:nowrap;cursor:pointer;user-select:none;
+  text-align:left;font-size:9.5px;letter-spacing:.19em;text-transform:uppercase;color:var(--ink-3);
+  font-weight:600;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.11);white-space:nowrap;cursor:pointer;user-select:none;
 }
 th:hover{color:var(--steel)}
 th[aria-sort]{color:var(--oxide)}
@@ -196,22 +165,24 @@ tbody tr:hover td{background:rgba(255,255,255,.022)}
 td.nm{color:var(--ink);font-weight:500}
 td.nm.unk{color:var(--ink-3);font-style:italic;font-weight:400}
 td.n,td.dt{font-variant-numeric:tabular-nums;color:var(--ink-3);white-space:nowrap}
-.pill{
-  display:inline-block;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
-  padding:2px 8px;border-radius:2px;border:1px solid;white-space:nowrap
-}
-.p-pub{color:var(--brass);border-color:rgba(174,135,38,.42);background:rgba(174,135,38,.10)}
-.p-sup{color:var(--oxide);border-color:rgba(192,57,43,.42);background:rgba(192,57,43,.10)}
+.pill{display:inline-block;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;padding:2px 8px;border-radius:2px;border:1px solid;white-space:nowrap}
+.p-pub{color:var(--ice);border-color:rgba(62,146,196,.45);background:rgba(62,146,196,.12)}
+.p-sup{color:var(--oxide);border-color:rgba(192,57,43,.45);background:rgba(192,57,43,.12)}
 .p-live{color:#E8E2D6;border-color:rgba(232,226,214,.35);background:rgba(232,226,214,.07)}
 .p-priv{color:var(--ink-3);border-color:rgba(255,255,255,.14)}
-.era{font-size:9.5px;letter-spacing:.14em;color:var(--ink-3)}
 .note{display:block;font-size:11.5px;color:var(--ink-3);font-weight:300;margin-top:2px;max-width:52ch}
 
-/* ── gaps ─────────────────────────────────────────────── */
-.gaps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
-.gap{padding:18px;border-left:3px solid var(--brass)}
-.gap h4{margin:0 0 7px;font-size:13px;color:var(--ink);font-weight:600;letter-spacing:.01em}
-.gap p{margin:0;font-size:12.5px;color:var(--ink-3);font-weight:300;line-height:1.55}
+/* ── origin ───────────────────────────────────────────── */
+.origin{padding:24px}
+.tl{margin:20px 0 0;padding:0;list-style:none;border-left:1px solid rgba(255,255,255,.12)}
+.tl li{position:relative;padding:0 0 18px 22px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-4px;top:7px;width:7px;height:7px;border-radius:50%;background:var(--oxide);box-shadow:0 0 0 3px var(--plate-lo)}
+.tl time{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ice);margin-bottom:3px}
+.tl p{margin:0;font-size:13px;color:var(--ink-2);font-weight:300;max-width:76ch}
+.callout{margin-top:22px;padding:16px 18px;border-left:3px solid var(--ice);background:rgba(62,146,196,.06);font-size:13px;color:var(--ink-2);font-weight:300}
+.callout b{color:var(--ink);font-weight:600}
+.unres{margin-top:14px;padding:16px 18px;border-left:3px solid var(--ink-3);font-size:12.5px;color:var(--ink-3);font-weight:300}
 
 footer{margin-top:64px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);font-size:11.5px;color:var(--ink-3);font-weight:300}
 footer a{color:var(--steel);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18)}
@@ -220,7 +191,6 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
 
 @media (max-width:640px){
   .row{grid-template-columns:112px 1fr 44px}
-  .spec{grid-template-columns:88px 1fr}
   .bk{grid-template-columns:60px 1fr 74px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -244,19 +214,19 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
   <div class="kpis" id="kpis"></div>
 
   <section>
-    <div class="head"><span class="num">01</span><h2>Two systems</h2></div>
-    <p class="sub">The server has funded mods two different ways. The break is dateable to 2025&#8209;07&#8209;29, when <code>#crowdfund-projects</code> replaced the legacy channel — and it was never announced.</p>
-    <div class="systems body-gap" id="systems"></div>
+    <div class="head"><span class="num">01</span><h2>On the board</h2></div>
+    <p class="sub">Crowdfunds currently posted in <code>#crowdfund-projects</code>, with what each one advertises and how many people have committed. Sign-ups are exact reactor counts with the T1 Carl bot removed.</p>
+    <div class="board body-gap" id="board"></div>
   </section>
 
   <section>
     <div class="head"><span class="num">02</span><h2>Release votes</h2></div>
-    <p class="sub">Each crowdfund closes with a vote on where the mod goes. It runs inside the paid channel, so <strong>only people who paid can cast it</strong> — turnout is a hard floor on that project's paying membership, not an estimate. Readable for 11 of 55.</p>
+    <p class="sub">Each crowdfund closes with a vote on where the mod goes. It runs inside the paid channel, so <strong>only people who paid can cast it</strong> — turnout is a hard floor on that project's paying membership, not an estimate.</p>
     <div class="plate chamfer chart body-gap">
       <div class="legend">
-        <span><i style="background:var(--brass)"></i>Released public</span>
+        <span><i style="background:var(--ice)"></i>Released public</span>
         <span><i style="background:var(--oxide)"></i>Supporter armoury only</span>
-        <span style="color:var(--ink-3)">Segments are labelled — colour is never the only cue.</span>
+        <span style="color:var(--ink-3)">Every segment is labelled — colour is never the only cue.</span>
       </div>
       <div class="bars" id="votes"></div>
     </div>
@@ -264,9 +234,9 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
 
   <section>
     <div class="head"><span class="num">03</span><h2>Who actually backs these</h2></div>
-    <p class="sub">Exact reactor lists for every crowdfund currently posted on the board, bot removed. The funding base is <strong>wide and shallow</strong> — it is not a fixed subscriber core.</p>
+    <p class="sub">Exact reactor lists for every crowdfund currently posted, bot removed. The funding base is <strong>wide and shallow</strong> — it is not a fixed subscriber core.</p>
     <div class="plate chamfer chart body-gap">
-      <div class="legend"><span style="color:var(--ink-2)">Of <b id="c-distinct"></b> distinct backers, how many of the <b id="c-k"></b> currently-posted crowdfunds they signed up for</span></div>
+      <div class="legend"><span style="color:var(--ink-2)">Of <b id="c-distinct"></b> distinct backers, how many of the <b id="c-k"></b> posted crowdfunds they signed up for</span></div>
       <div class="buckets" id="buckets"></div>
       <p class="sub" style="margin:18px 0 0;font-size:12.5px" id="cohort-note"></p>
     </div>
@@ -274,8 +244,12 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
 
   <section>
     <div class="head"><span class="num">04</span><h2>Cadence</h2></div>
-    <p class="sub">Crowdfunds launched per month. Brass is the buy-in era, oxide is Smiley's way.</p>
+    <p class="sub">Crowdfunds launched per month, across the whole run.</p>
     <div class="plate chamfer chart body-gap">
+      <div class="legend">
+        <span><i style="background:var(--ice-dim)"></i>2024–25</span>
+        <span><i style="background:var(--oxide-dim)"></i>2025–26</span>
+      </div>
       <div class="cadence" id="cadence"></div>
       <div class="axis"><span id="cad-a"></span><span id="cad-b"></span></div>
     </div>
@@ -287,10 +261,10 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
     <div class="plate chamfer chart body-gap">
       <div class="filters">
         <input id="q" type="search" placeholder="Search name, creator, note…" aria-label="Search the registry">
-        <select id="fEra" aria-label="Filter by system">
-          <option value="">Both systems</option>
-          <option value="1">System 1 — buy-in</option>
-          <option value="2">System 2 — Smiley's way</option>
+        <select id="fEra" aria-label="Filter by period">
+          <option value="">All periods</option>
+          <option value="1">2024–2025</option>
+          <option value="2">2025–2026</option>
         </select>
         <select id="fCreator" aria-label="Filter by creator"><option value="">All creators</option></select>
         <span class="count-note" id="rows"></span>
@@ -299,7 +273,7 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
         <table>
           <thead><tr>
             <th data-k="n">#</th><th data-k="date">Date</th><th data-k="name">Crowdfund</th>
-            <th data-k="creator">Creator</th><th data-k="turnout">Turnout</th><th data-k="release">Outcome</th>
+            <th data-k="creator">Creator</th><th data-k="turnout">Backing</th><th data-k="release">Outcome</th>
           </tr></thead>
           <tbody id="tbody"></tbody>
         </table>
@@ -307,10 +281,14 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
     </div>
   </section>
 
-  <section>
-    <div class="head"><span class="num">06</span><h2>What the record cannot tell you</h2></div>
-    <p class="sub">This panel is built from a channel that deletes itself. These are the holes, stated rather than papered over.</p>
-    <div class="gaps body-gap" id="gaps"></div>
+  <section id="origin-sec">
+    <div class="head"><span class="num">06</span><h2>Where this came from</h2></div>
+    <p class="sub" id="origin-lede"></p>
+    <div class="plate chamfer origin body-gap">
+      <ul class="tl" id="origin-tl"></ul>
+      <div class="callout" id="origin-contrast"></div>
+      <div class="unres" id="origin-unres"></div>
+    </div>
   </section>
 
   <footer>
@@ -325,6 +303,7 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+let CF = [], STATE = { k:'n', dir:1 };
 
 fetch('data/crowdfunds.json')
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
@@ -333,67 +312,52 @@ fetch('data/crowdfunds.json')
     '<div class="wrap"><div class="err">Could not load <code>data/crowdfunds.json</code> ('+esc(e.message)+
     '). If you opened this file directly from disk, serve the folder over HTTP instead — browsers block local fetch.</div></div>'; });
 
-let CF = [], STATE = { k:'n', dir:1 };
-
 function render(d){
   CF = d.crowdfunds;
   const live    = CF.filter(c => c.live);
   const voted   = CF.filter(c => c.vote);
   const votes   = voted.reduce((n,c) => n + c.vote.total, 0);
   const supOnly = voted.filter(c => c.release === 'supporters').length;
+  const named   = CF.filter(c => c.name).length;
 
-  $('#stamp').textContent =
-    'Updated ' + d.meta.updated + ' · ' + CF.length + ' crowdfunds on record · Era 1 is a floor, not a count';
+  $('#stamp').textContent = 'Updated ' + d.meta.updated + ' · ' + CF.length + ' crowdfunds on record';
 
-  /* ── KPIs ───────────────────────────────────────────── */
-  const kpi = (v, k, n) => `<div class="plate chamfer kpi"><div class="v">${v}</div><div class="k">${k}</div><div class="n">${n}</div></div>`;
+  const kpi = (v,k,n) => `<div class="plate chamfer kpi"><div class="v">${v}</div><div class="k">${k}</div><div class="n">${n}</div></div>`;
   $('#kpis').innerHTML = [
-    kpi(CF.length + '<small>+</small>', 'Crowdfunds run', 'Across two funding systems since 2024-11-02'),
-    kpi(live.length, 'Live now', live.map(c => esc(c.name)).join(' · ') || '—'),
+    kpi(CF.length + '<small>+</small>', 'Crowdfunds run', named + ' named, ' + (CF.length-named) + ' whose name did not survive'),
+    kpi(live.length, 'On the board now', live.reduce((n,c)=>n+(c.signups||0),0).toLocaleString() + ' people signed up between them'),
     kpi(d.cohort.distinct, 'Distinct backers', 'Across the crowdfunds still posted'),
     kpi(votes.toLocaleString(), 'Paid votes counted', 'Floor on money in — ' + voted.length + ' projects measurable'),
     kpi(supOnly + '<small>/' + voted.length + '</small>', 'Stayed private', 'Voted to the supporter armoury, never public')
   ].join('');
 
-  /* ── systems ────────────────────────────────────────── */
-  $('#systems').innerHTML = d.systems.map(s => `
-    <div class="plate chamfer sys ${s.id===2?'two':''}">
-      <h3>${esc(s.name)}</h3>
-      <div class="per">${esc(s.period)}</div>
-      <dl class="spec">
-        <dt>Channel</dt><dd>${esc(s.channel)}</dd>
-        <dt>Opt in</dt><dd>${esc(s.optIn)}</dd>
-        <dt>Price</dt><dd>${esc(s.price)}</dd>
-        <dt>Access</dt><dd>${esc(s.access)}</dd>
-        <dt>Channels</dt><dd>${esc(s.channels)}</dd>
-        <dt>Roles</dt><dd>${esc(s.roles)}</dd>
-        <dt>Reward</dt><dd>${esc(s.tier)}</dd>
-      </dl>
-      <div class="count"><b>${s.recovered}</b>${s.complete
-        ? 'recovered — believed complete'
-        : 'recovered — <span style="color:var(--brass)">the true figure is higher</span>'}</div>
-    </div>`).join('');
+  /* ── on the board ───────────────────────────────────── */
+  $('#board').innerHTML = live.slice().sort((a,b)=>(b.signups||0)-(a.signups||0)).map(c => `
+    <div class="plate chamfer bd">
+      <h3>${esc(c.name)}</h3>
+      <div class="by">${c.creator ? 'by <b>'+esc(c.creator)+'</b>' : 'creator unknown'} · posted ${esc(c.date)}</div>
+      ${c.items && c.items.length ? '<ul>'+c.items.map(i=>`<li>${esc(i)}</li>`).join('')+'</ul>' : ''}
+      <div class="foot"><b>${(c.signups ?? 0).toLocaleString()}</b><span>signed up</span></div>
+    </div>`).join('') || '<p class="sub">Nothing is currently posted.</p>';
 
-  /* ── release votes (stacked, direct-labelled) ───────── */
+  /* ── release votes ──────────────────────────────────── */
   const max = Math.max(...voted.map(c => c.vote.total));
-  $('#votes').innerHTML = voted.slice().sort((a,b) => b.vote.total - a.vote.total).map(c => {
-    const v = c.vote, w = t => (t / max * 100).toFixed(2) + '%';
-    const seg = (n, col, title) => n
-      ? `<div class="seg" style="width:${w(n)};background:${col}" title="${esc(title)}: ${n} votes"><b>${n}</b></div>` : '';
+  $('#votes').innerHTML = voted.slice().sort((a,b)=>b.vote.total-a.vote.total).map(c => {
+    const v = c.vote, w = t => (t/max*100).toFixed(2)+'%';
+    const seg = (nv,col,title) => nv
+      ? `<div class="seg" style="width:${w(nv)};background:${col}" title="${esc(title)}: ${nv} votes"><b>${nv}</b></div>` : '';
     return `<div class="row">
       <div class="lab" title="${esc(c.name)}">${esc(c.name)}</div>
       <div class="track">
-        ${seg(v.public, 'var(--brass)', 'Public')}
-        ${seg(v.supporters, 'var(--oxide)', 'Supporters')}
-        ${seg(v.other, 'var(--oxide-lo)', 'Other')}
+        ${seg(v.public,'var(--ice)','Public')}
+        ${seg(v.supporters,'var(--oxide)','Supporters')}
+        ${seg(v.other,'var(--oxide-dim)','Other')}
       </div>
       <div class="tot">${v.total}</div>
     </div>`;
   }).join('');
 
-  /* ── cohort buckets (sequential ramp, one hue) ──────── */
-  /* sequential ramp — one hue, dark→bright, generated for however many
-     crowdfunds were live when the data was pulled */
+  /* ── cohort — sequential ramp, one hue, generated for n ─ */
   const B = d.cohort.buckets, n = B.length;
   const lerp = (a,b,t) => Math.round(a + (b-a)*t);
   const ramp = B.map((_,i) => {
@@ -409,91 +373,89 @@ function render(d){
       <div class="bar" style="width:${(b.people/bmax*100).toFixed(2)}%;background:${ramp[i]}"><b>${b.people}</b></div>
       <div class="pct">${(b.people/d.cohort.distinct*100).toFixed(1)}%</div>
     </div>`).join('');
-  const one = B[0].people, nb = d.cohort.newBlood, word = ['','one','two','three','four','five','six','seven','eight'][n] || n;
+  const nb = d.cohort.newBlood, word = ['','one','two','three','four','five','six','seven','eight'][n] || n;
   $('#cohort-note').innerHTML =
-    `<strong>${(one/d.cohort.distinct*100).toFixed(0)}% backed only one of the ${word}.</strong> ` +
+    `<strong>${(B[0].people/d.cohort.distinct*100).toFixed(0)}% backed only one of the ${word}.</strong> ` +
     `${nb.fresh} of ${esc(nb.crowdfund)}'s ${nb.of} backers appear on none of the other ${n-1} — each crowdfund recruits largely fresh.`;
 
   /* ── cadence ────────────────────────────────────────── */
   const byMonth = new Map();
-  CF.forEach(c => {
-    const k = c.date.slice(0,7);
-    if (!byMonth.has(k)) byMonth.set(k, { n:0, era:c.era });
-    byMonth.get(k).n++;
-  });
+  CF.forEach(c => { const k = c.date.slice(0,7);
+    if (!byMonth.has(k)) byMonth.set(k,{n:0,era:c.era}); byMonth.get(k).n++; });
   const keys = [...byMonth.keys()].sort();
   const span = []; let cur = keys[0];
   while (cur <= keys[keys.length-1]) {
     span.push(cur);
-    let [y,m] = cur.split('-').map(Number);
-    m++; if (m > 12) { m = 1; y++; }
+    let [y,m] = cur.split('-').map(Number); m++; if (m>12){m=1;y++;}
     cur = y + '-' + String(m).padStart(2,'0');
   }
-  const cmax = Math.max(...[...byMonth.values()].map(v => v.n));
+  const cmax = Math.max(...[...byMonth.values()].map(v=>v.n));
   $('#cadence').innerHTML = span.map(k => {
-    const v = byMonth.get(k) || { n:0, era:2 };
-    const [y,m] = k.split('-');
+    const v = byMonth.get(k) || {n:0,era:2}, [y,m] = k.split('-');
     return `<div class="cad" data-era="${v.era}" style="height:${v.n?Math.max(6,v.n/cmax*100):1}%"
       title="${MONTHS[+m-1]} ${y} — ${v.n} crowdfund${v.n===1?'':'s'}"></div>`;
   }).join('');
-  const fmt = k => { const [y,m] = k.split('-'); return MONTHS[+m-1] + ' ' + y; };
+  const fmt = k => { const [y,m]=k.split('-'); return MONTHS[+m-1]+' '+y; };
   $('#cad-a').textContent = fmt(span[0]);
   $('#cad-b').textContent = fmt(span[span.length-1]);
 
   /* ── registry ───────────────────────────────────────── */
-  const creators = [...new Set(CF.map(c => c.creator).filter(Boolean))].sort();
-  $('#fCreator').innerHTML += creators.map(c => `<option>${esc(c)}</option>`).join('');
+  const creators = [...new Set(CF.map(c=>c.creator).filter(Boolean))].sort();
+  $('#fCreator').innerHTML += creators.map(c=>`<option>${esc(c)}</option>`).join('');
   ['#q','#fEra','#fCreator'].forEach(s => $(s).addEventListener('input', table));
   document.querySelectorAll('th[data-k]').forEach(th => th.addEventListener('click', () => {
     const k = th.dataset.k;
-    STATE.dir = STATE.k === k ? -STATE.dir : 1;
-    STATE.k = k;
-    document.querySelectorAll('th').forEach(t => t.removeAttribute('aria-sort'));
-    th.setAttribute('aria-sort', STATE.dir === 1 ? 'ascending' : 'descending');
+    STATE.dir = STATE.k === k ? -STATE.dir : 1; STATE.k = k;
+    document.querySelectorAll('th').forEach(t=>t.removeAttribute('aria-sort'));
+    th.setAttribute('aria-sort', STATE.dir===1?'ascending':'descending');
     table();
   }));
   table();
 
-  /* ── gaps ───────────────────────────────────────────── */
-  $('#gaps').innerHTML = d.gaps.map(g =>
-    `<div class="plate gap"><h4>${esc(g.title)}</h4><p>${esc(g.body)}</p></div>`).join('');
+  /* ── origin ─────────────────────────────────────────── */
+  const o = d.origin;
+  if (o) {
+    $('#origin-lede').textContent = o.body;
+    $('#origin-tl').innerHTML = o.facts.map(f =>
+      `<li><time>${esc(f.date)}</time><p>${esc(f.text)}</p></li>`).join('');
+    $('#origin-contrast').innerHTML = '<b>Commissions vs. crowdfunds.</b> ' + esc(o.contrast);
+    $('#origin-unres').textContent = o.unresolved;
+  } else { $('#origin-sec').remove(); }
 }
 
 function table(){
   const q = $('#q').value.trim().toLowerCase();
   const era = $('#fEra').value, cr = $('#fCreator').value;
   let rows = CF.filter(c =>
-    (!era || String(c.era) === era) &&
-    (!cr || c.creator === cr) &&
-    (!q || [c.name, c.creator, c.note].filter(Boolean).join(' ').toLowerCase().includes(q)));
+    (!era || String(c.era)===era) && (!cr || c.creator===cr) &&
+    (!q || [c.name,c.creator,c.note].filter(Boolean).join(' ').toLowerCase().includes(q)));
 
   const val = c => ({
-    n:c.n, date:c.date, name:(c.name||'zzz').toLowerCase(),
-    creator:(c.creator||'zzz').toLowerCase(),
-    turnout:c.vote ? c.vote.total : (c.signups || -1),
-    release:c.release || (c.live ? 'live' : 'zzz')
+    n:c.n, date:c.date, name:(c.name||'zzz').toLowerCase(), creator:(c.creator||'zzz').toLowerCase(),
+    turnout: c.vote ? c.vote.total : (c.signups || -1),
+    release: c.release || (c.live ? 'live' : 'zzz')
   })[STATE.k];
-  rows.sort((a,b) => { const x = val(a), y = val(b); return (x > y ? 1 : x < y ? -1 : 0) * STATE.dir; });
+  rows.sort((a,b)=>{ const x=val(a), y=val(b); return (x>y?1:x<y?-1:0)*STATE.dir; });
 
   $('#rows').textContent = rows.length + ' of ' + CF.length;
   $('#tbody').innerHTML = rows.map(c => {
     let out = '<span class="pill p-priv">—</span>';
-    if (c.live) out = '<span class="pill p-live">Live</span>';
-    else if (c.release === 'public')     out = '<span class="pill p-pub">Public</span>';
-    else if (c.release === 'supporters') out = '<span class="pill p-sup">Supporters</span>';
-    else if (c.release === 'private')    out = '<span class="pill p-priv">Private</span>';
+    if (c.live) out = '<span class="pill p-live">On the board</span>';
+    else if (c.release==='public')     out = '<span class="pill p-pub">Public</span>';
+    else if (c.release==='supporters') out = '<span class="pill p-sup">Supporters</span>';
+    else if (c.release==='private')    out = '<span class="pill p-priv">Private</span>';
 
-    const turn = c.vote ? c.vote.total
+    const back = c.vote ? c.vote.total + ' <span style="color:var(--ink-3);font-size:11px">voted</span>'
               : c.signups ? c.signups + ' <span style="color:var(--ink-3);font-size:11px">signed</span>'
               : '<span style="color:var(--ink-3)">—</span>';
 
     return `<tr>
       <td class="n">${c.n}</td>
-      <td class="dt">${c.date.slice(0,7)}${c.approx?'<span style="color:var(--oxide)" title="approximate">~</span>':''}<div class="era">SYS ${c.era}</div></td>
-      <td class="nm ${c.name?'':'unk'}">${c.name ? esc(c.name) : 'name not recoverable'}
-        ${c.note ? `<span class="note">${esc(c.note)}</span>` : ''}</td>
-      <td>${c.creator ? esc(c.creator) : '<span style="color:var(--ink-3)">—</span>'}</td>
-      <td class="n">${turn}</td>
+      <td class="dt">${c.date.slice(0,7)}${c.approx?'<span style="color:var(--oxide)" title="approximate">~</span>':''}</td>
+      <td class="nm ${c.name?'':'unk'}">${c.name?esc(c.name):'name not recoverable'}
+        ${c.note?`<span class="note">${esc(c.note)}</span>`:''}</td>
+      <td>${c.creator?esc(c.creator):'<span style="color:var(--ink-3)">—</span>'}</td>
+      <td class="n">${back}</td>
       <td>${out}</td>
     </tr>`;
   }).join('');
