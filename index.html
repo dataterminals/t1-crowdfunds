@@ -122,6 +122,19 @@ section{margin-top:52px}
 .bd .foot b{font-family:'Michroma',sans-serif;font-size:22px;color:var(--ink)}
 .bd .foot span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
 
+/* Scope caveat. Sits above the two sections that only cover part of the
+   catalogue, so nobody reads a sample as the whole thing. */
+.coverage{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:14px 16px;margin-bottom:18px;border-radius:2px;
+  border-left:3px solid var(--brand);background:rgba(170,15,27,.07);
+}
+.coverage .n{
+  font-family:'Michroma',sans-serif;font-size:13px;color:var(--ink);
+  white-space:nowrap;padding-top:1px;letter-spacing:.02em;
+}
+.coverage p{margin:0;font-size:12.5px;color:var(--ink-2);font-weight:300;line-height:1.5;max-width:82ch}
+
 /* ── destinations + delivery ──────────────────────────── */
 .dests{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:10px;margin-bottom:20px}
 .dest{padding:13px 15px;border-left:3px solid var(--ink-3);background:rgba(255,255,255,.018);border-radius:2px}
@@ -240,6 +253,7 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
     <div class="head"><span class="num">02</span><h2>Where it went</h2></div>
     <p class="sub">A crowdfund does not have one destination. A vote inside the paid channel decides where <em>the voted portion</em> goes — sometimes the project, sometimes a named subset of it — while exclusives never leave the crowdfund at all. Only people who paid can cast the vote, so turnout is also a hard floor on that project's paying membership.</p>
     <div class="plate chamfer chart body-gap">
+      <div class="coverage" id="cov-votes"></div>
       <div class="dests" id="dests"></div>
       <div class="legend">
         <span><i style="background:var(--ice)"></i>Voted public</span>
@@ -254,6 +268,7 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
     <div class="head"><span class="num">03</span><h2>What backers actually got</h2></div>
     <p class="sub">The vote is not the end of it. Every measurable crowdfund kept delivering afterwards — a stream of separate drops to that crowdfund's own channel, at a pace each creator sets for themselves. Bars show the delivery window; the count is posts from the crowdfund's principal creator carrying a download or a replacement.</p>
     <div class="plate chamfer chart body-gap">
+      <div class="coverage" id="cov-deliv"></div>
       <div class="deliv" id="deliv"></div>
       <p class="sub" style="margin:18px 0 0;font-size:12.5px" id="deliv-note"></p>
     </div>
@@ -362,6 +377,15 @@ function render(d){
     </div>`).join('') || '<p class="sub">Nothing is currently posted.</p>';
 
   /* ── release votes ──────────────────────────────────── */
+  const cov = d.meta.coverage;
+  if (cov) {
+    const html = `<div class="n">${esc(cov.heading)}</div><p>${esc(cov.body)}</p>`;
+    $('#cov-votes').innerHTML = html;
+    $('#cov-deliv').innerHTML = html;
+  } else {
+    ['#cov-votes','#cov-deliv'].forEach(x => $(x).remove());
+  }
+
   $('#dests').innerHTML = (d.destinations||[]).map(x =>
     `<div class="dest d-${esc(x.id)}"><h4>${esc(x.label)}</h4><div class="who">${esc(x.who)}</div><p>${esc(x.note)}</p></div>`).join('');
 

@@ -4,7 +4,13 @@
     "guild": "Tier 1 Imports",
     "guildId": "1302392670181916722",
     "narrative": "https://github.com/dataterminals/grb-modding-knowledgebase/blob/main/reference/crowdfund-history.md",
-    "note": "Era 1 is a recovered floor, not a count. See the Gaps panel."
+    "note": "Era 1 is a recovered floor, not a count. See the Gaps panel.",
+    "coverage": {
+      "measured": 11,
+      "total": 55,
+      "heading": "Why 11 of 55",
+      "body": "A crowdfund's release vote and its delivery record both live inside that crowdfund's own paid channel, readable only by people who backed it. These 11 are what is visible from a single supporter's account. Covering the whole catalogue would take someone who backed every crowdfund in the roles system, or a server admin. Everything in these two sections is therefore a sample, not the population — the catalogue below is complete, the depth is not."
+    }
   },
   "crowdfunds": [
     {
@@ -67,7 +73,6 @@
       "creator": null,
       "announced": "chat",
       "release": "private",
-      "note": "Stayed private over asset copyright.",
       "src": "1349505166176555060"
     },
     {
