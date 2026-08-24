@@ -113,6 +113,26 @@ section{margin-top:52px}
 .bd .foot b{font-family:'Michroma',sans-serif;font-size:22px;color:var(--ink)}
 .bd .foot span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
 
+/* ── destinations + delivery ──────────────────────────── */
+.dests{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:10px;margin-bottom:20px}
+.dest{padding:13px 15px;border-left:3px solid var(--ink-3);background:rgba(255,255,255,.018);border-radius:2px}
+.dest.d-public{border-color:var(--ice)} .dest.d-supporters{border-color:var(--oxide)}
+.dest.d-exclusive{border-color:#8A2E22} .dest.d-kingslayer{border-color:#5B5A56}
+.dest h4{margin:0 0 2px;font-size:12px;color:var(--ink);font-weight:600;letter-spacing:.02em}
+.dest .who{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px}
+.dest p{margin:0;font-size:11.5px;color:var(--ink-3);font-weight:300;line-height:1.45}
+
+.deliv{display:grid;gap:7px}
+.dv{display:grid;grid-template-columns:170px 1fr 92px;align-items:center;gap:12px}
+.dv .lab{font-size:12.5px;color:var(--ink-2);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dv .span{height:19px;background:rgba(255,255,255,.035);border-radius:2px;position:relative}
+.dv .fill{position:absolute;top:0;height:100%;background:var(--oxide-dim);border-radius:2px;display:flex;align-items:center;padding:0 7px;gap:6px}
+.dv .fill b{font-size:10.5px;color:var(--ink);font-variant-numeric:tabular-nums}
+.dv:hover .fill{background:var(--oxide)}
+.dv .meta{font-size:11px;color:var(--ink-3);text-align:right;font-variant-numeric:tabular-nums}
+.scope{display:inline-block;margin-left:7px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ice);border:1px solid rgba(62,146,196,.45);border-radius:2px;padding:1px 5px;vertical-align:1px}
+
 /* ── charts ───────────────────────────────────────────── */
 .chart{padding:22px 20px 16px}
 .legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:16px;font-size:11.5px;color:var(--ink-2)}
@@ -208,20 +228,30 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
   </section>
 
   <section>
-    <div class="head"><span class="num">02</span><h2>Release votes</h2></div>
-    <p class="sub">Each crowdfund closes with a vote on where the mod goes. It runs inside the paid channel, so <strong>only people who paid can cast it</strong> — turnout is a hard floor on that project's paying membership, not an estimate.</p>
+    <div class="head"><span class="num">02</span><h2>Where it went</h2></div>
+    <p class="sub">A crowdfund does not have one destination. A vote inside the paid channel decides where <em>the voted portion</em> goes — sometimes the project, sometimes a named subset of it — while exclusives never leave the crowdfund at all. Only people who paid can cast the vote, so turnout is also a hard floor on that project's paying membership.</p>
     <div class="plate chamfer chart body-gap">
+      <div class="dests" id="dests"></div>
       <div class="legend">
-        <span><i style="background:var(--ice)"></i>Released public</span>
-        <span><i style="background:var(--oxide)"></i>Supporter armoury only</span>
-        <span style="color:var(--ink-3)">Every segment is labelled — colour is never the only cue.</span>
+        <span><i style="background:var(--ice)"></i>Voted public</span>
+        <span><i style="background:var(--oxide)"></i>Voted supporter armoury</span>
+        <span style="color:var(--ink-3)">Every segment is labelled — colour is never the only cue. <b style="color:var(--ice)">SUBSET</b> marks a vote scoped to named items rather than the whole project.</span>
       </div>
       <div class="bars" id="votes"></div>
     </div>
   </section>
 
   <section>
-    <div class="head"><span class="num">03</span><h2>Who actually backs these</h2></div>
+    <div class="head"><span class="num">03</span><h2>What backers actually got</h2></div>
+    <p class="sub">The vote is not the end of it. Every measurable crowdfund kept delivering afterwards — a stream of separate drops to that crowdfund's own channel, at a pace each creator sets for themselves. Bars show the delivery window; the count is posts from the crowdfund's principal creator carrying a download or a replacement.</p>
+    <div class="plate chamfer chart body-gap">
+      <div class="deliv" id="deliv"></div>
+      <p class="sub" style="margin:18px 0 0;font-size:12.5px" id="deliv-note"></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">04</span><h2>Who actually backs these</h2></div>
     <p class="sub">Exact reactor lists for every crowdfund currently posted, bot removed. The funding base is <strong>wide and shallow</strong> — it is not a fixed subscriber core.</p>
     <div class="plate chamfer chart body-gap">
       <div class="legend"><span style="color:var(--ink-2)">Of <b id="c-distinct"></b> distinct backers, how many of the <b id="c-k"></b> posted crowdfunds they signed up for</span></div>
@@ -231,7 +261,7 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
   </section>
 
   <section>
-    <div class="head"><span class="num">04</span><h2>Cadence</h2></div>
+    <div class="head"><span class="num">05</span><h2>Cadence</h2></div>
     <p class="sub">Crowdfunds launched per month, across the whole run.</p>
     <div class="plate chamfer chart body-gap">
       <div class="legend">
@@ -244,7 +274,7 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
   </section>
 
   <section>
-    <div class="head"><span class="num">05</span><h2>Registry</h2></div>
+    <div class="head"><span class="num">06</span><h2>Registry</h2></div>
     <p class="sub">Every crowdfund recoverable from the record. Click a column to sort.</p>
     <div class="plate chamfer chart body-gap">
       <div class="filters">
@@ -296,8 +326,11 @@ function render(d){
   const live    = CF.filter(c => c.live);
   const voted   = CF.filter(c => c.vote);
   const votes   = voted.reduce((n,c) => n + c.vote.total, 0);
-  const supOnly = voted.filter(c => c.release === 'supporters').length;
   const named   = CF.filter(c => c.name).length;
+  const delivered  = CF.filter(c => c.delivery);
+  const totalPosts = delivered.reduce((n,c) => n + c.delivery.posts, 0);
+  const minD = Math.min(...delivered.map(c => c.delivery.days));
+  const maxD = Math.max(...delivered.map(c => c.delivery.days));
 
   $('#stamp').textContent = 'Updated ' + d.meta.updated + ' · ' + CF.length + ' crowdfunds on record';
 
@@ -307,7 +340,7 @@ function render(d){
     kpi(live.length, 'On the board now', live.reduce((n,c)=>n+(c.signups||0),0).toLocaleString() + ' people signed up between them'),
     kpi(d.cohort.distinct, 'Distinct backers', 'Across the crowdfunds still posted'),
     kpi(votes.toLocaleString(), 'Paid votes counted', 'Floor on money in — ' + voted.length + ' projects measurable'),
-    kpi(supOnly + '<small>/' + voted.length + '</small>', 'Stayed private', 'Voted to the supporter armoury, never public')
+    kpi(totalPosts, 'Deliveries after the vote', 'Separate drops to backers, over ' + minD + '–' + maxD + ' days per crowdfund')
   ].join('');
 
   /* ── on the board ───────────────────────────────────── */
@@ -320,21 +353,44 @@ function render(d){
     </div>`).join('') || '<p class="sub">Nothing is currently posted.</p>';
 
   /* ── release votes ──────────────────────────────────── */
+  $('#dests').innerHTML = (d.destinations||[]).map(x =>
+    `<div class="dest d-${esc(x.id)}"><h4>${esc(x.label)}</h4><div class="who">${esc(x.who)}</div><p>${esc(x.note)}</p></div>`).join('');
+
+  const COL = { public:'var(--ice)', supporters:'var(--oxide)', private:'var(--oxide-dim)' };
   const max = Math.max(...voted.map(c => c.vote.total));
   $('#votes').innerHTML = voted.slice().sort((a,b)=>b.vote.total-a.vote.total).map(c => {
     const v = c.vote, w = t => (t/max*100).toFixed(2)+'%';
-    const seg = (nv,col,title) => nv
-      ? `<div class="seg" style="width:${w(nv)};background:${col}" title="${esc(title)}: ${nv} votes"><b>${nv}</b></div>` : '';
+    const norm = l => /public/i.test(l) ? 'public' : /private/i.test(l) ? 'private' : 'supporters';
+    const segs = v.options.slice().sort((a,b)=>b.count-a.count).map(o =>
+      o.count ? `<div class="seg" style="width:${w(o.count)};background:${COL[norm(o.label)]}"
+        title="${esc(o.label)}: ${o.count} of ${v.total} votes"><b>${o.count}</b></div>` : '').join('');
+    const tag = v.scope === 'items' ? `<span class="scope" title="${esc(v.scopeNote||'')}">subset</span>` : '';
     return `<div class="row">
-      <div class="lab" title="${esc(c.name)}">${esc(c.name)}</div>
-      <div class="track">
-        ${seg(v.public,'var(--ice)','Public')}
-        ${seg(v.supporters,'var(--oxide)','Supporters')}
-        ${seg(v.other,'var(--oxide-dim)','Other')}
-      </div>
+      <div class="lab" title="${esc(v.question)}">${esc(c.name)}${tag}</div>
+      <div class="track">${segs}</div>
       <div class="tot">${v.total}</div>
     </div>`;
   }).join('');
+
+  /* ── what backers actually got ──────────────────────── */
+  const dmax = Math.max(...delivered.map(c => c.delivery.days)) || 1;
+  $('#deliv').innerHTML = delivered.slice().sort((a,b)=>b.delivery.days-a.delivery.days).map(c => {
+    const v = c.delivery;
+    return `<div class="dv">
+      <div class="lab" title="${esc(c.name)}">${esc(c.name)}</div>
+      <div class="span" title="${esc(v.first)} → ${esc(v.last)}">
+        <div class="fill" style="width:${Math.max(9,(v.days/dmax*100)).toFixed(2)}%">
+          <b>${v.posts} drops</b><span style="font-size:10px;color:var(--ink-3)">${v.days}d</span>
+        </div>
+      </div>
+      <div class="meta">${esc(v.creator)}</div>
+    </div>`;
+  }).join('');
+  const totalExcl = delivered.reduce((n,c)=>n+c.delivery.exclusiveMentions,0);
+  const med = [...delivered.map(c=>c.delivery.days)].sort((a,b)=>a-b)[Math.floor(delivered.length/2)];
+  $('#deliv-note').innerHTML =
+    `<strong>${totalPosts} deliveries across ${delivered.length} crowdfunds</strong>, a median of ${med} days from first drop to last — ` +
+    `and ${totalExcl} of them flagged as exclusives, which by convention never leave the crowdfund that paid for them.`;
 
   /* ── cohort — sequential ramp, one hue, generated for n ─ */
   const B = d.cohort.buckets, n = B.length;

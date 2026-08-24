@@ -265,12 +265,35 @@
       "creator": "YourMomsChestHair",
       "announced": "everyone",
       "vote": {
+        "question": "Where to share the XOF Outfits?",
+        "scope": "items",
+        "scopeNote": "the XOF Outfits only — most of the rest stayed supporter-side",
+        "options": [
+          {
+            "label": "Tier 2 Armory",
+            "count": 35
+          },
+          {
+            "label": "Public Release",
+            "count": 59
+          },
+          {
+            "label": "Private",
+            "count": 5
+          }
+        ],
         "total": 99,
-        "public": 59,
-        "supporters": 35,
-        "other": 5
+        "winner": "public"
       },
-      "release": "public"
+      "release": "public",
+      "delivery": {
+        "creator": "YourMomsChestHair",
+        "posts": 16,
+        "first": "2025-09-19",
+        "last": "2026-03-07",
+        "days": 169,
+        "exclusiveMentions": 1
+      }
     },
     {
       "n": 28,
@@ -290,11 +313,31 @@
       "creator": "YourMomsChestHair",
       "announced": "everyone",
       "vote": {
+        "question": "Where to share?",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Tier 2",
+            "count": 47
+          },
+          {
+            "label": "Public",
+            "count": 97
+          }
+        ],
         "total": 144,
-        "public": 97,
-        "supporters": 47
+        "winner": "public"
       },
-      "release": "public"
+      "release": "public",
+      "delivery": {
+        "creator": "YourMomsChestHair",
+        "posts": 39,
+        "first": "2025-10-14",
+        "last": "2025-12-17",
+        "days": 64,
+        "exclusiveMentions": 6
+      }
     },
     {
       "n": 30,
@@ -305,11 +348,31 @@
       "announced": "everyone",
       "note": "Mercer's debut crowdfund.",
       "vote": {
+        "question": "How to release?",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 22
+          },
+          {
+            "label": "Tier 2 Armoury",
+            "count": 32
+          }
+        ],
         "total": 54,
-        "public": 22,
-        "supporters": 32
+        "winner": "supporters"
       },
-      "release": "supporters"
+      "release": "supporters",
+      "delivery": {
+        "creator": "MercerBlack™",
+        "posts": 15,
+        "first": "2025-11-11",
+        "last": "2026-02-13",
+        "days": 94,
+        "exclusiveMentions": 3
+      }
     },
     {
       "n": 31,
@@ -319,11 +382,31 @@
       "creator": null,
       "announced": "everyone",
       "vote": {
+        "question": "Where to release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 42
+          },
+          {
+            "label": "Tier 2 Armoury",
+            "count": 13
+          }
+        ],
         "total": 55,
-        "public": 42,
-        "supporters": 13
+        "winner": "public"
       },
-      "release": "public"
+      "release": "public",
+      "delivery": {
+        "creator": "Gazza2764",
+        "posts": 6,
+        "first": "2025-11-11",
+        "last": "2025-12-29",
+        "days": 48,
+        "exclusiveMentions": 0
+      }
     },
     {
       "n": 32,
@@ -333,11 +416,31 @@
       "creator": "YourMomsChestHair",
       "announced": "everyone",
       "vote": {
+        "question": "Where to Share the Exfil Helmets, Police Vests and Belt",
+        "scope": "items",
+        "scopeNote": "the Exfil helmets, police vests and belt only",
+        "options": [
+          {
+            "label": "Publicly?",
+            "count": 32
+          },
+          {
+            "label": "Tier 2",
+            "count": 40
+          }
+        ],
         "total": 72,
-        "public": 32,
-        "supporters": 40
+        "winner": "supporters"
       },
-      "release": "supporters"
+      "release": "supporters",
+      "delivery": {
+        "creator": "YourMomsChestHair",
+        "posts": 11,
+        "first": "2025-11-21",
+        "last": "2025-12-16",
+        "days": 25,
+        "exclusiveMentions": 3
+      }
     },
     {
       "n": 33,
@@ -347,11 +450,31 @@
       "creator": null,
       "announced": "everyone",
       "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 22
+          },
+          {
+            "label": "Tier 2 Armoury.",
+            "count": 39
+          }
+        ],
         "total": 61,
-        "public": 22,
-        "supporters": 39
+        "winner": "supporters"
       },
-      "release": "supporters"
+      "release": "supporters",
+      "delivery": {
+        "creator": "𝐵𝑂𝑁𝐹𝐼𝑅𝐸",
+        "posts": 13,
+        "first": "2025-11-21",
+        "last": "2026-05-29",
+        "days": 189,
+        "exclusiveMentions": 1
+      }
     },
     {
       "n": 34,
@@ -362,11 +485,31 @@
       "creator": null,
       "announced": "everyone",
       "vote": {
+        "question": "Release",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 17
+          },
+          {
+            "label": "Tier 2",
+            "count": 31
+          }
+        ],
         "total": 48,
-        "public": 17,
-        "supporters": 31
+        "winner": "supporters"
       },
-      "release": "supporters"
+      "release": "supporters",
+      "delivery": {
+        "creator": "MercerBlack™",
+        "posts": 18,
+        "first": "2025-12-18",
+        "last": "2026-02-13",
+        "days": 57,
+        "exclusiveMentions": 6
+      }
     },
     {
       "n": 35,
@@ -377,11 +520,31 @@
       "announced": "everyone",
       "note": "Largest measured turnout, and the closest vote — 11 votes in it.",
       "vote": {
+        "question": "The time has come, where to share this project?",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Tier 2",
+            "count": 143
+          },
+          {
+            "label": "Public",
+            "count": 132
+          }
+        ],
         "total": 275,
-        "public": 132,
-        "supporters": 143
+        "winner": "supporters"
       },
-      "release": "supporters"
+      "release": "supporters",
+      "delivery": {
+        "creator": "YourMomsChestHair",
+        "posts": 18,
+        "first": "2026-01-16",
+        "last": "2026-02-17",
+        "days": 32,
+        "exclusiveMentions": 2
+      }
     },
     {
       "n": 36,
@@ -392,11 +555,31 @@
       "creator": "ViruS",
       "announced": "everyone",
       "vote": {
+        "question": "Where does it go?",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 27
+          },
+          {
+            "label": "Tier 2",
+            "count": 31
+          }
+        ],
         "total": 58,
-        "public": 27,
-        "supporters": 31
+        "winner": "supporters"
       },
-      "release": "supporters"
+      "release": "supporters",
+      "delivery": {
+        "creator": "ViruS",
+        "posts": 13,
+        "first": "2025-12-20",
+        "last": "2026-01-24",
+        "days": 35,
+        "exclusiveMentions": 5
+      }
     },
     {
       "n": 37,
@@ -406,11 +589,31 @@
       "creator": "SAMI TECH SUPUMA",
       "announced": "everyone",
       "vote": {
+        "question": "Where to release this?",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Tier 2",
+            "count": 60
+          },
+          {
+            "label": "Public",
+            "count": 43
+          }
+        ],
         "total": 103,
-        "public": 43,
-        "supporters": 60
+        "winner": "supporters"
       },
-      "release": "supporters"
+      "release": "supporters",
+      "delivery": {
+        "creator": "SAMI TECH SUPUMA",
+        "posts": 36,
+        "first": "2026-01-17",
+        "last": "2026-06-07",
+        "days": 141,
+        "exclusiveMentions": 8
+      }
     },
     {
       "n": 38,
@@ -420,11 +623,31 @@
       "creator": "Acosta.",
       "announced": "everyone",
       "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 84
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 65
+          }
+        ],
         "total": 149,
-        "public": 84,
-        "supporters": 65
+        "winner": "public"
       },
-      "release": "public"
+      "release": "public",
+      "delivery": {
+        "creator": "Acosta.",
+        "posts": 13,
+        "first": "2026-01-22",
+        "last": "2026-04-02",
+        "days": 70,
+        "exclusiveMentions": 4
+      }
     },
     {
       "n": 39,
@@ -750,5 +973,37 @@
       "fresh": 37,
       "of": 117
     }
-  }
+  },
+  "destinations": [
+    {
+      "id": "public",
+      "label": "Public",
+      "who": "Anyone",
+      "note": "#mod-releases, and usually Nexus too."
+    },
+    {
+      "id": "supporters",
+      "label": "Supporter armoury",
+      "who": "Anyone who has ever backed any crowdfund",
+      "note": "#supporter-armory. Called the “Tier 2 Armory” until the roles were renamed in March 2026 — and confusingly the “Tier 1 Armory” before that."
+    },
+    {
+      "id": "exclusive",
+      "label": "Crowdfund exclusive",
+      "who": "Backers of that one crowdfund",
+      "note": "Stays in the crowdfund's own channel. “Exclusives don’t go public, they are a treat from the modders to the people that contributed to the CF.”"
+    },
+    {
+      "id": "private",
+      "label": "Private",
+      "who": "Nobody further",
+      "note": "An option on at least one vote; it has never won."
+    },
+    {
+      "id": "kingslayer",
+      "label": "Kingslayer armoury",
+      "who": "Holders of the earned Kingslayer role",
+      "note": "#kingslayer–armory. A parallel track, NOT a crowdfund destination — modders post there directly, threads titled “Kingslayer Exclusive”."
+    }
+  ]
 }
