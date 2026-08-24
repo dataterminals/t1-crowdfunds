@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>T1 Crowdfund Registry</title>
 <meta name="description" content="Every crowdfund Tier 1 Imports has run — a live registry with sign-ups, release-vote turnout, backer overlap and provenance.">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="T1 Crowdfund Registry">
+<meta property="og:description" content="Every crowdfund Tier 1 Imports has run — sign-ups, release-vote turnout, backer overlap and provenance.">
+<meta property="og:image" content="https://dataterminals.github.io/t1-crowdfunds/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -27,13 +35,17 @@
   --ink-3:#6A655D;        /* muted */
   --steel:#B9B2A8;
 
-  /* The two categorical hues. Chosen with a colourblind-separation
-     validator, not by eye: normal-vision ΔE 28.9, deuteranopia 20.8.
-     An earlier brass (#AE8726) passed the floor at ΔE 17.7 and was still
-     too close to the red to read at a glance — reported from use. */
-  --oxide:#C0392B;
+  /* --brand is the community's own red, taken from the logo kit's
+     `color_match` layer. It is too dark to carry data on this ground
+     (2.45:1, under the 3:1 floor), so identity uses it and charts use
+     --oxide: the same hue to within 0.1°, the same saturation, value
+     lifted only until it clears. Both were run through a
+     colourblind-separation validator against --ice, not picked by eye:
+     normal-vision ΔE 32.5, deuteranopia 23.5. */
+  --brand:#AA0F1B;
+  --oxide:#C41220;
   --ice:#3E92C4;
-  --oxide-dim:#7E2A20;
+  --oxide-dim:#7E1218;
   --ice-dim:#265B7C;
   --r:3px;
 }
@@ -65,24 +77,21 @@ h2{font-family:'Michroma',sans-serif;font-size:15px;letter-spacing:.10em;text-tr
 /* ── masthead ─────────────────────────────────────────── */
 header{padding:54px 0 30px}
 .crest{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-.badge{
-  width:72px;height:72px;flex:none;border-radius:22%;
-  background:linear-gradient(160deg,#232326,#141416);
-  border:1px solid rgba(255,255,255,.09);
-  box-shadow:inset 0 2px 0 rgba(255,255,255,.07),inset 0 -3px 8px rgba(0,0,0,.7),0 6px 18px rgba(0,0,0,.55);
-  display:grid;place-items:center;
+/* The community's own mark, lifted from the closing frame of the server
+   icon. Left unboxed on purpose: the glitch trail runs right, straight into
+   the wordmark, and a squircle would crop the one gesture that carries it. */
+.crestmark{
+  height:96px;width:auto;flex:none;
+  filter:drop-shadow(0 4px 14px rgba(0,0,0,.75)) drop-shadow(0 0 26px rgba(170,15,27,.16));
 }
-.badge span{
-  font-family:'Michroma',sans-serif;font-size:23px;color:#2B2B2F;
-  text-shadow:0 1px 0 rgba(255,255,255,.11),0 -1px 1px rgba(0,0,0,.7);
-}
+@media (max-width:640px){ .crestmark{height:68px} }
 h1{
   font-family:'Michroma',sans-serif;margin:0;line-height:1.06;
   font-size:clamp(24px,4.2vw,42px);letter-spacing:.02em;color:#CFC9BE;
   text-shadow:0 1px 0 rgba(255,255,255,.10),0 2px 3px rgba(0,0,0,.8);
 }
 h1 em{font-style:normal;color:var(--oxide)}
-.rule{height:2px;margin:26px 0 0;background:linear-gradient(90deg,var(--oxide) 0 96px,rgba(255,255,255,.10) 96px 100%)}
+.rule{height:2px;margin:26px 0 0;background:linear-gradient(90deg,var(--brand) 0 96px,rgba(255,255,255,.10) 96px 100%)}
 .stamp{display:inline-flex;align-items:center;gap:9px;margin-top:12px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3)}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--oxide);box-shadow:0 0 9px var(--oxide)}
 
@@ -209,7 +218,7 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
 
   <header>
     <div class="crest">
-      <div class="badge"><span>T1</span></div>
+      <img class="crestmark" src="assets/t1-skull.png" alt="Tier 1 Imports skull mark" width="380" height="341">
       <div>
         <div class="tag">Tier 1 Imports · Ghost Recon Breakpoint</div>
         <h1>Crowdfund <em>Registry</em></h1>

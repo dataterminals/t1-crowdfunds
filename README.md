@@ -98,11 +98,18 @@ geometry, scratched surface texture, a monochrome warm-stone ground, and oxide r
 accent. Type is square-techno throughout — Michroma standing in for the Microgramma he names as his
 own reference, with Chakra Petch for its chamfered corners.
 
-The two chart hues (`#C0392B` oxide, `#3E92C4` cold steel) were run through a colourblind-separation
-validator rather than picked by eye — normal-vision ΔE 28.9, deuteranopia 20.8. An earlier brass
-cleared the validator's floor and still could not be told apart from the red in use, which is why the
-threshold is a floor and not a target. Both segments are direct-labelled regardless, so colour never
-carries identity alone. The panel is dark-only by deliberate choice — it is a brand, not a theme.
+The mark is the community's own — the glitch-skull from the closing frames of the animated server
+icon, taken from the supplied logo kit rather than traced. It sits unboxed in the masthead because
+the glitch trail runs right, into the wordmark, and a frame would crop the one gesture carrying it.
+Below about 48px that trail turns to noise, so the small favicons use the cranium alone.
+
+**`#AA0F1B`** is the brand red, from the kit's `color_match` layer. On this ground it measures 2.45:1,
+under the 3:1 contrast floor, so it is used for identity — the masthead rule, the mark's glow — and
+never to carry data. Charts use **`#C41220`**: the same hue to within 0.1°, the same saturation, value
+lifted only until it clears. Against **`#3E92C4`** that pair measures normal-vision ΔE 32.5 and
+deuteranopia 23.5 on a colourblind-separation validator, run rather than eyeballed. Both segments are
+direct-labelled regardless, so colour never carries identity alone. The panel is dark-only by
+deliberate choice — it is a brand, not a theme.
 
 ---
 
@@ -112,6 +119,7 @@ carries identity alone. The panel is dark-only by deliberate choice — it is a 
 index.html            the panel — one file, no build, no dependencies but Google Fonts
 data/crowdfunds.json  every crowdfund, the release destinations, cohort stats
 tools/refresh.py      re-pull live figures from Discord via the bridge
+assets/               the logo kit as supplied, plus the derived mark, icons and link card
 ```
 
 Not an official Tier 1 Imports publication.
