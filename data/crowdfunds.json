@@ -1,14 +1,14 @@
 {
   "meta": {
-    "updated": "2026-08-24",
+    "updated": "2026-08-25",
     "guild": "Tier 1 Imports",
     "guildId": "1302392670181916722",
     "narrative": "https://github.com/dataterminals/grb-modding-knowledgebase/blob/main/reference/crowdfund-history.md",
     "note": "Era 1 is a recovered floor, not a count, and #6 and #8 are the same project counted twice — 23 rows, 22 distinct. System 2 is complete and, since 2026-08-24, completely named. See the Gaps panel.",
     "coverage": {
       "measured": 11,
-      "total": 55,
-      "heading": "Why 11 of 55",
+      "total": 56,
+      "heading": "Why 11 of 56",
       "body": "A crowdfund's release vote and its delivery record both live inside that crowdfund's own paid channel, readable only by people who backed it. These 11 are what is visible from a single supporter's account. Covering the whole catalogue would take someone who backed every crowdfund in the roles system, or a server admin. Everything in these two sections is therefore a sample, not the population — the catalogue below is complete, the depth is not."
     }
   },
@@ -746,7 +746,7 @@
       "creator": "SAMI TECH SUPUMA",
       "announced": "everyone",
       "live": true,
-      "signups": 197,
+      "signups": 200,
       "items": [
         "Cyberpunk Character.",
         "Medical Mask.",
@@ -780,7 +780,7 @@
       "creator": "MercerBlack™",
       "announced": "everyone",
       "live": true,
-      "signups": 172,
+      "signups": 176,
       "items": [
         "Kawasaki 125cc Dirtbike",
         "KTM 1390 Super Duke 2026",
@@ -798,7 +798,7 @@
       "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
       "announced": "everyone",
       "live": true,
-      "signups": 131,
+      "signups": 134,
       "items": [
         "THOR NFM Plate Carrier",
         "VZ58 Sporter",
@@ -823,7 +823,7 @@
       "creator": "urmomschesthair",
       "announced": "everyone",
       "live": true,
-      "signups": 384,
+      "signups": 399,
       "note": "Largest sign-up on record.",
       "items": [
         "Patagonia L9 Field Shirt Jacket",
@@ -842,7 +842,7 @@
       "creator": "ViruS",
       "announced": "everyone",
       "live": true,
-      "signups": 317,
+      "signups": 321,
       "items": [
         "M4A1 Block II",
         "MK12 SPR",
@@ -858,7 +858,7 @@
       "creator": "Avetis",
       "announced": "everyone",
       "live": true,
-      "signups": 117,
+      "signups": 126,
       "items": [
         "LR308",
         "SRSA2",
@@ -869,44 +869,64 @@
         "M240B",
         "FN P90"
       ]
+    },
+    {
+      "n": 56,
+      "era": 2,
+      "date": "2026-08-25",
+      "name": "Flash Point",
+      "creator": "𝐵𝑂𝑁𝐹𝐼𝑅𝐸",
+      "announced": "everyone",
+      "live": true,
+      "note": "Announced as “Another Bonfire Masterclass”. This creator’s third crowdfund, after Dual Sig and Blackbird.",
+      "src": "1541702858146320394",
+      "items": [
+        "Spiritus Systems LV-119, choose your loadout",
+        "FN Five-Seven MK3 Switchable Sight"
+      ],
+      "signups": 11
     }
   ],
   "cohort": {
-    "asOf": "2026-08-23",
-    "basis": "Exact reactor lists for the 6 crowdfunds live on this date, with the T1 Carl bot removed.",
-    "distinct": 812,
-    "signups": 1318,
+    "asOf": "2026-08-25",
+    "basis": "Exact reactor lists for the 7 crowdfunds live on this date, with the T1 Carl bot removed.",
+    "distinct": 837,
+    "signups": 1367,
     "buckets": [
       {
-        "label": "1 of 6",
-        "people": 551
+        "label": "1 of 7",
+        "people": 568
       },
       {
-        "label": "2 of 6",
-        "people": 138
+        "label": "2 of 7",
+        "people": 141
       },
       {
-        "label": "3 of 6",
-        "people": 59
+        "label": "3 of 7",
+        "people": 63
       },
       {
-        "label": "4 of 6",
-        "people": 20
+        "label": "4 of 7",
+        "people": 19
       },
       {
-        "label": "5 of 6",
-        "people": 30
+        "label": "5 of 7",
+        "people": 29
       },
       {
-        "label": "6 of 6",
-        "people": 14
+        "label": "6 of 7",
+        "people": 12
+      },
+      {
+        "label": "7 of 7",
+        "people": 5
       }
     ],
     "pairwise": [
       {
         "a": "CYBERSAMI",
         "b": "HEAVY METAL",
-        "shared": 53
+        "shared": 54
       },
       {
         "a": "CYBERSAMI",
@@ -916,42 +936,52 @@
       {
         "a": "CYBERSAMI",
         "b": "Rangers Lead The Way",
-        "shared": 68
+        "shared": 71
       },
       {
         "a": "CYBERSAMI",
         "b": "GWOT Classics",
-        "shared": 51
+        "shared": 53
       },
       {
         "a": "CYBERSAMI",
         "b": "Dealer's Choice",
-        "shared": 28
+        "shared": 29
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Flash Point",
+        "shared": 8
       },
       {
         "a": "HEAVY METAL",
         "b": "Pastaslov",
-        "shared": 66
+        "shared": 68
       },
       {
         "a": "HEAVY METAL",
         "b": "Rangers Lead The Way",
-        "shared": 76
+        "shared": 78
       },
       {
         "a": "HEAVY METAL",
         "b": "GWOT Classics",
-        "shared": 64
+        "shared": 66
       },
       {
         "a": "HEAVY METAL",
         "b": "Dealer's Choice",
-        "shared": 32
+        "shared": 34
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Flash Point",
+        "shared": 8
       },
       {
         "a": "Pastaslov",
         "b": "Rangers Lead The Way",
-        "shared": 89
+        "shared": 91
       },
       {
         "a": "Pastaslov",
@@ -961,28 +991,49 @@
       {
         "a": "Pastaslov",
         "b": "Dealer's Choice",
-        "shared": 36
+        "shared": 37
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Flash Point",
+        "shared": 7
       },
       {
         "a": "Rangers Lead The Way",
         "b": "GWOT Classics",
-        "shared": 143
+        "shared": 144
       },
       {
         "a": "Rangers Lead The Way",
         "b": "Dealer's Choice",
-        "shared": 59
+        "shared": 64
+      },
+      {
+        "a": "Rangers Lead The Way",
+        "b": "Flash Point",
+        "shared": 9
       },
       {
         "a": "GWOT Classics",
         "b": "Dealer's Choice",
-        "shared": 65
+        "shared": 67
+      },
+      {
+        "a": "GWOT Classics",
+        "b": "Flash Point",
+        "shared": 9
+      },
+      {
+        "a": "Dealer's Choice",
+        "b": "Flash Point",
+        "shared": 7
       }
     ],
     "newBlood": {
-      "crowdfund": "Dealer's Choice",
-      "fresh": 37,
-      "of": 117
+      "crowdfund": "GWOT Classics",
+      "fresh": 149,
+      "of": 321,
+      "ageDays": 45
     }
   },
   "destinations": [

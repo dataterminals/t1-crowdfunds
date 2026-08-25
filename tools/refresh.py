@@ -24,6 +24,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import itertools
 import json
 import pathlib
@@ -143,13 +144,39 @@ def main() -> None:
             ],
             "newBlood": {},
         }
-        newest = max(sets, key=lambda n: by_name.get(n.casefold(), {}).get("date", ""))
+        # "How many of the newest crowdfund's backers are new to the server?"
+        # only means something once the crowdfund has had time to recruit. A post
+        # that went up hours ago measures who happened to be watching the board,
+        # which is a different question with the opposite answer -- the first
+        # people through the door are the regulars, so `fresh` reads 0 and the
+        # panel's sentence inverts. Require a week before a crowdfund is eligible.
+        MIN_AGE_DAYS = 7
+        today = dt.date.today()
+
+        def age(name: str) -> int:
+            d = by_name.get(name.casefold(), {}).get("date")
+            if not d:
+                return 10**6
+            return (today - dt.date.fromisoformat(d)).days
+
+        def when(name: str) -> str:
+            return by_name.get(name.casefold(), {}).get("date", "")
+
+        eligible = [n for n in sets if age(n) >= MIN_AGE_DAYS]
+        skipped = [n for n in sets if age(n) < MIN_AGE_DAYS]
+        for n in skipped:
+            print(f"  new blood: skipping {n} ({age(n)}d old, needs {MIN_AGE_DAYS}d)")
+        newest = max(eligible or list(sets), key=when)
+        if not eligible:
+            print("  ! no crowdfund on the board is a week old; new-blood figure is not meaningful")
         others = set().union(*(s for n, s in sets.items() if n != newest))
         doc["cohort"]["newBlood"] = {
             "crowdfund": newest,
             "fresh": len(sets[newest] - others),
             "of": len(sets[newest]),
+            "ageDays": age(newest),
         }
+        print(f"  new blood: {newest} ({age(newest)}d old)")
         print(f"cohort: {len(allu)} distinct across {k} crowdfunds")
 
     today = subprocess.run(["git", "log", "-1", "--format=%cs"], capture_output=True,
