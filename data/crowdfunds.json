@@ -7,8 +7,8 @@
     "note": "Era 1 is a recovered floor, not a count, and #6 and #8 are the same project counted twice — 23 rows, 22 distinct. System 2 is complete and, since 2026-08-24, completely named. See the Gaps panel.",
     "coverage": {
       "measured": 11,
-      "total": 56,
-      "heading": "Why 11 of 56",
+      "total": 57,
+      "heading": "Why 11 of 57",
       "body": "A crowdfund's release vote and its delivery record both live inside that crowdfund's own paid channel, readable only by people who backed it. These 11 are what is visible from a single supporter's account. Covering the whole catalogue would take someone who backed every crowdfund in the roles system, or a server admin. Everything in these two sections is therefore a sample, not the population — the catalogue below is complete, the depth is not."
     }
   },
@@ -746,7 +746,7 @@
       "creator": "SAMI TECH SUPUMA",
       "announced": "everyone",
       "live": true,
-      "signups": 200,
+      "signups": 201,
       "items": [
         "Cyberpunk Character.",
         "Medical Mask.",
@@ -780,7 +780,7 @@
       "creator": "MercerBlack™",
       "announced": "everyone",
       "live": true,
-      "signups": 176,
+      "signups": 177,
       "items": [
         "Kawasaki 125cc Dirtbike",
         "KTM 1390 Super Duke 2026",
@@ -823,7 +823,7 @@
       "creator": "urmomschesthair",
       "announced": "everyone",
       "live": true,
-      "signups": 399,
+      "signups": 405,
       "note": "Largest sign-up on record.",
       "items": [
         "Patagonia L9 Field Shirt Jacket",
@@ -842,7 +842,7 @@
       "creator": "ViruS",
       "announced": "everyone",
       "live": true,
-      "signups": 321,
+      "signups": 322,
       "items": [
         "M4A1 Block II",
         "MK12 SPR",
@@ -858,7 +858,7 @@
       "creator": "Avetis",
       "announced": "everyone",
       "live": true,
-      "signups": 126,
+      "signups": 129,
       "items": [
         "LR308",
         "SRSA2",
@@ -884,49 +884,72 @@
         "Spiritus Systems LV-119, choose your loadout",
         "FN Five-Seven MK3 Switchable Sight"
       ],
-      "signups": 11
+      "signups": 78
+    },
+    {
+      "n": 57,
+      "era": 2,
+      "date": "2026-08-25",
+      "name": "WMD",
+      "creator": "keem",
+      "announced": "everyone",
+      "live": true,
+      "note": "Announced as “Weapons of Mass Destruction”. This creator’s second crowdfund, after Smokin Aces.",
+      "items": [
+        "G95KA1",
+        "Steyr AUG A3",
+        "BCM RAIDER M10 Handguard",
+        "KAC URX 3 Handguard",
+        "Daniel Defence RIS III",
+        "MCX Spear XM7"
+      ],
+      "signups": 32
     }
   ],
   "cohort": {
     "asOf": "2026-08-25",
-    "basis": "Exact reactor lists for the 7 crowdfunds live on this date, with the T1 Carl bot removed.",
-    "distinct": 837,
-    "signups": 1367,
+    "basis": "Exact reactor lists for the 8 crowdfunds live on this date, with the T1 Carl bot removed.",
+    "distinct": 861,
+    "signups": 1478,
     "buckets": [
       {
-        "label": "1 of 7",
-        "people": 568
+        "label": "1 of 8",
+        "people": 576
       },
       {
-        "label": "2 of 7",
-        "people": 141
+        "label": "2 of 8",
+        "people": 145
       },
       {
-        "label": "3 of 7",
+        "label": "3 of 8",
         "people": 63
       },
       {
-        "label": "4 of 7",
-        "people": 19
+        "label": "4 of 8",
+        "people": 20
       },
       {
-        "label": "5 of 7",
-        "people": 29
+        "label": "5 of 8",
+        "people": 25
       },
       {
-        "label": "6 of 7",
-        "people": 12
+        "label": "6 of 8",
+        "people": 14
       },
       {
-        "label": "7 of 7",
-        "people": 5
+        "label": "7 of 8",
+        "people": 10
+      },
+      {
+        "label": "8 of 8",
+        "people": 8
       }
     ],
     "pairwise": [
       {
         "a": "CYBERSAMI",
         "b": "HEAVY METAL",
-        "shared": 54
+        "shared": 55
       },
       {
         "a": "CYBERSAMI",
@@ -936,22 +959,27 @@
       {
         "a": "CYBERSAMI",
         "b": "Rangers Lead The Way",
-        "shared": 71
+        "shared": 72
       },
       {
         "a": "CYBERSAMI",
         "b": "GWOT Classics",
-        "shared": 53
+        "shared": 54
       },
       {
         "a": "CYBERSAMI",
         "b": "Dealer's Choice",
-        "shared": 29
+        "shared": 33
       },
       {
         "a": "CYBERSAMI",
         "b": "Flash Point",
-        "shared": 8
+        "shared": 29
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "WMD",
+        "shared": 17
       },
       {
         "a": "HEAVY METAL",
@@ -971,17 +999,22 @@
       {
         "a": "HEAVY METAL",
         "b": "Dealer's Choice",
-        "shared": 34
+        "shared": 38
       },
       {
         "a": "HEAVY METAL",
         "b": "Flash Point",
-        "shared": 8
+        "shared": 31
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "WMD",
+        "shared": 14
       },
       {
         "a": "Pastaslov",
         "b": "Rangers Lead The Way",
-        "shared": 91
+        "shared": 92
       },
       {
         "a": "Pastaslov",
@@ -991,48 +1024,73 @@
       {
         "a": "Pastaslov",
         "b": "Dealer's Choice",
-        "shared": 37
+        "shared": 40
       },
       {
         "a": "Pastaslov",
         "b": "Flash Point",
-        "shared": 7
+        "shared": 30
+      },
+      {
+        "a": "Pastaslov",
+        "b": "WMD",
+        "shared": 14
       },
       {
         "a": "Rangers Lead The Way",
         "b": "GWOT Classics",
-        "shared": 144
+        "shared": 145
       },
       {
         "a": "Rangers Lead The Way",
         "b": "Dealer's Choice",
-        "shared": 64
+        "shared": 68
       },
       {
         "a": "Rangers Lead The Way",
         "b": "Flash Point",
-        "shared": 9
+        "shared": 53
+      },
+      {
+        "a": "Rangers Lead The Way",
+        "b": "WMD",
+        "shared": 24
       },
       {
         "a": "GWOT Classics",
         "b": "Dealer's Choice",
-        "shared": 67
+        "shared": 69
       },
       {
         "a": "GWOT Classics",
         "b": "Flash Point",
-        "shared": 9
+        "shared": 44
+      },
+      {
+        "a": "GWOT Classics",
+        "b": "WMD",
+        "shared": 23
       },
       {
         "a": "Dealer's Choice",
         "b": "Flash Point",
-        "shared": 7
+        "shared": 40
+      },
+      {
+        "a": "Dealer's Choice",
+        "b": "WMD",
+        "shared": 17
+      },
+      {
+        "a": "Flash Point",
+        "b": "WMD",
+        "shared": 19
       }
     ],
     "newBlood": {
       "crowdfund": "GWOT Classics",
-      "fresh": 149,
-      "of": 321,
+      "fresh": 147,
+      "of": 322,
       "ageDays": 45
     }
   },
