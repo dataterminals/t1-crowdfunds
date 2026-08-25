@@ -18,7 +18,7 @@ not overwrite them. New crowdfunds are reported for you to add by hand.
 Usage:
     python tools/refresh.py                 # refresh in place
     python tools/refresh.py --dry-run       # print what would change
-    python tools/refresh.py --port 8791     # if the mirror moved
+    python tools/refresh.py --port 8791     # if the mirror is not where the config says
 """
 
 from __future__ import annotations
@@ -27,6 +27,7 @@ import argparse
 import datetime as dt
 import itertools
 import json
+import os
 import pathlib
 import re
 import subprocess
@@ -41,16 +42,43 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "crowdfunds.json"
 
 
+def config() -> dict:
+    """The sidecar's own config file, which knows the port it actually listens on."""
+    if sys.platform == "win32":
+        base = pathlib.Path(os.environ.get("APPDATA", "~"))
+    elif sys.platform == "darwin":
+        base = pathlib.Path("~/Library/Application Support")
+    else:
+        base = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", "~/.config"))
+    try:
+        return json.loads(
+            (base.expanduser() / "vesktop-claude-bridge" / "config.json").read_text(encoding="utf-8")
+        )
+    except (OSError, ValueError):
+        return {}
+
+
 def token() -> str:
     """Ask the sidecar for its bearer token, the same way its README does."""
+    # An explicit token wins. On a box where this script and the sidecar disagree
+    # about what %APPDATA% contains -- Store-Python sandboxing, a redirected
+    # profile -- `npm run token` mints against the wrong store and the api 401s.
+    # Reading the sidecar's own token file is the way out.
+    env = os.environ.get("BRIDGE_TOKEN", "").strip()
+    if env:
+        return env
     for repo in (ROOT.parent / "VesktopClaudeBridge", ROOT.parent.parent / "VesktopClaudeBridge"):
         if (repo / "sidecar" / "package.json").exists():
             out = subprocess.run(
                 ["npm", "--prefix", str(repo / "sidecar"), "run", "--silent", "token"],
                 capture_output=True, text=True, shell=(sys.platform == "win32"),
             )
-            if out.returncode == 0 and out.stdout.strip():
-                return out.stdout.strip()
+            # The sidecar logs its startup banner to stdout ahead of the token,
+            # so take the last line rather than the whole blob -- otherwise the
+            # banner rides along in the Authorization header and the api 401s.
+            lines = [l.strip() for l in out.stdout.splitlines() if l.strip()]
+            if out.returncode == 0 and lines:
+                return lines[-1]
     sys.exit("Could not read the bridge token. Is VesktopClaudeBridge checked out alongside this repo?")
 
 
@@ -76,17 +104,19 @@ def title_of(body: str) -> str | None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--port", type=int, default=8791)
+    ap.add_argument("--port", type=int, default=None,
+                    help="http api port; defaults to the sidecar config's httpPort")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    port = args.port or config().get("httpPort") or 8791
     tok = token()
     doc = json.loads(DATA.read_text(encoding="utf-8"))
     # Case-insensitive: the board shouts some titles ("HEAVY METAL") that the
     # catalogue stores in title case.
     by_name = {c["name"].casefold(): c for c in doc["crowdfunds"] if c.get("name")}
 
-    board = get(args.port, tok, f"/history?channelId={BOARD}&limit=25&json=1")
+    board = get(port, tok, f"/history?channelId={BOARD}&limit=25&json=1")
     posts = board.get("messages", [])
     print(f"board: {len(posts)} live post(s)")
 
@@ -98,7 +128,7 @@ def main() -> None:
         name = title_of(m.get("content", ""))
         if not name:
             continue
-        r = get(args.port, tok,
+        r = get(port, tok,
                 f"/reactors?channelId={BOARD}&messageId={m['id']}&limit=500&json=1")
         groups = r.get("groups") or []
         if not groups:
