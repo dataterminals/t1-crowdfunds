@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-08-25",
+    "updated": "2026-08-30",
     "guild": "Tier 1 Imports",
     "guildId": "1302392670181916722",
     "narrative": "https://github.com/dataterminals/grb-modding-knowledgebase/blob/main/reference/crowdfund-history.md",
@@ -746,7 +746,7 @@
       "creator": "SAMI TECH SUPUMA",
       "announced": "everyone",
       "live": true,
-      "signups": 201,
+      "signups": 206,
       "items": [
         "Cyberpunk Character.",
         "Medical Mask.",
@@ -780,7 +780,7 @@
       "creator": "MercerBlack™",
       "announced": "everyone",
       "live": true,
-      "signups": 177,
+      "signups": 180,
       "items": [
         "Kawasaki 125cc Dirtbike",
         "KTM 1390 Super Duke 2026",
@@ -798,7 +798,7 @@
       "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
       "announced": "everyone",
       "live": true,
-      "signups": 134,
+      "signups": 137,
       "items": [
         "THOR NFM Plate Carrier",
         "VZ58 Sporter",
@@ -823,7 +823,7 @@
       "creator": "urmomschesthair",
       "announced": "everyone",
       "live": true,
-      "signups": 405,
+      "signups": 420,
       "note": "Largest sign-up on record.",
       "items": [
         "Patagonia L9 Field Shirt Jacket",
@@ -842,7 +842,7 @@
       "creator": "ViruS",
       "announced": "everyone",
       "live": true,
-      "signups": 322,
+      "signups": 333,
       "items": [
         "M4A1 Block II",
         "MK12 SPR",
@@ -858,7 +858,7 @@
       "creator": "Avetis",
       "announced": "everyone",
       "live": true,
-      "signups": 129,
+      "signups": 139,
       "items": [
         "LR308",
         "SRSA2",
@@ -884,7 +884,7 @@
         "Spiritus Systems LV-119, choose your loadout",
         "FN Five-Seven MK3 Switchable Sight"
       ],
-      "signups": 78
+      "signups": 107
     },
     {
       "n": 57,
@@ -903,30 +903,31 @@
         "Daniel Defence RIS III",
         "MCX Spear XM7"
       ],
-      "signups": 32
+      "signups": 106,
+      "src": "1541885741859078318"
     }
   ],
   "cohort": {
-    "asOf": "2026-08-25",
+    "asOf": "2026-08-30",
     "basis": "Exact reactor lists for the 8 crowdfunds live on this date, with the T1 Carl bot removed.",
-    "distinct": 861,
-    "signups": 1478,
+    "distinct": 918,
+    "signups": 1628,
     "buckets": [
       {
         "label": "1 of 8",
-        "people": 576
+        "people": 600
       },
       {
         "label": "2 of 8",
-        "people": 145
+        "people": 163
       },
       {
         "label": "3 of 8",
-        "people": 63
+        "people": 68
       },
       {
         "label": "4 of 8",
-        "people": 20
+        "people": 21
       },
       {
         "label": "5 of 8",
@@ -934,164 +935,164 @@
       },
       {
         "label": "6 of 8",
-        "people": 14
+        "people": 15
       },
       {
         "label": "7 of 8",
-        "people": 10
+        "people": 9
       },
       {
         "label": "8 of 8",
-        "people": 8
+        "people": 17
       }
     ],
     "pairwise": [
       {
         "a": "CYBERSAMI",
         "b": "HEAVY METAL",
+        "shared": 58
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Pastaslov",
+        "shared": 50
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Rangers Lead The Way",
+        "shared": 76
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "GWOT Classics",
         "shared": 55
       },
       {
         "a": "CYBERSAMI",
-        "b": "Pastaslov",
-        "shared": 47
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "Rangers Lead The Way",
-        "shared": 72
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "GWOT Classics",
-        "shared": 54
-      },
-      {
-        "a": "CYBERSAMI",
         "b": "Dealer's Choice",
+        "shared": 35
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Flash Point",
+        "shared": 32
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "WMD",
+        "shared": 35
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Pastaslov",
+        "shared": 70
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Rangers Lead The Way",
+        "shared": 80
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "GWOT Classics",
+        "shared": 67
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Dealer's Choice",
+        "shared": 41
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Flash Point",
+        "shared": 35
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "WMD",
+        "shared": 34
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Rangers Lead The Way",
+        "shared": 95
+      },
+      {
+        "a": "Pastaslov",
+        "b": "GWOT Classics",
+        "shared": 68
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Dealer's Choice",
+        "shared": 42
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Flash Point",
         "shared": 33
       },
       {
-        "a": "CYBERSAMI",
-        "b": "Flash Point",
-        "shared": 29
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "WMD",
-        "shared": 17
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Pastaslov",
-        "shared": 68
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Rangers Lead The Way",
-        "shared": 78
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "GWOT Classics",
-        "shared": 66
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Dealer's Choice",
-        "shared": 38
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Flash Point",
-        "shared": 31
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "WMD",
-        "shared": 14
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Rangers Lead The Way",
-        "shared": 92
-      },
-      {
-        "a": "Pastaslov",
-        "b": "GWOT Classics",
-        "shared": 68
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Dealer's Choice",
-        "shared": 40
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Flash Point",
-        "shared": 30
-      },
-      {
         "a": "Pastaslov",
         "b": "WMD",
-        "shared": 14
+        "shared": 35
       },
       {
         "a": "Rangers Lead The Way",
         "b": "GWOT Classics",
-        "shared": 145
+        "shared": 150
       },
       {
         "a": "Rangers Lead The Way",
         "b": "Dealer's Choice",
-        "shared": 68
+        "shared": 76
       },
       {
         "a": "Rangers Lead The Way",
         "b": "Flash Point",
-        "shared": 53
+        "shared": 64
       },
       {
         "a": "Rangers Lead The Way",
         "b": "WMD",
-        "shared": 24
+        "shared": 63
       },
       {
         "a": "GWOT Classics",
         "b": "Dealer's Choice",
-        "shared": 69
+        "shared": 73
       },
       {
         "a": "GWOT Classics",
         "b": "Flash Point",
-        "shared": 44
+        "shared": 56
       },
       {
         "a": "GWOT Classics",
         "b": "WMD",
-        "shared": 23
+        "shared": 57
       },
       {
         "a": "Dealer's Choice",
         "b": "Flash Point",
-        "shared": 40
+        "shared": 50
       },
       {
         "a": "Dealer's Choice",
         "b": "WMD",
-        "shared": 17
+        "shared": 49
       },
       {
         "a": "Flash Point",
         "b": "WMD",
-        "shared": 19
+        "shared": 54
       }
     ],
     "newBlood": {
-      "crowdfund": "GWOT Classics",
-      "fresh": 147,
-      "of": 322,
-      "ageDays": 45
+      "crowdfund": "Dealer's Choice",
+      "fresh": 39,
+      "of": 139,
+      "ageDays": 10
     }
   },
   "destinations": [
