@@ -208,6 +208,10 @@ td.nm{color:var(--ink);font-weight:500}
 td.nm.unk{color:var(--ink-3);font-style:italic;font-weight:400}
 td.n,td.dt{font-variant-numeric:tabular-nums;color:var(--ink-3);white-space:nowrap}
 .pill{display:inline-block;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;padding:2px 8px;border-radius:2px;border:1px solid;white-space:nowrap}
+/* Destination reconstructed from the public record rather than read from the
+   crowdfund's own release vote. Dashed = a weaker claim, and it should look it. */
+.pill.inf{border-style:dashed;opacity:.78}
+.pill.inf::after{content:' b0';margin-left:3px;opacity:.8}
 .p-pub{color:var(--ice);border-color:rgba(62,146,196,.45);background:rgba(62,146,196,.12)}
 .p-sup{color:var(--oxide);border-color:rgba(192,57,43,.45);background:rgba(192,57,43,.12)}
 .p-live{color:#E8E2D6;border-color:rgba(232,226,214,.35);background:rgba(232,226,214,.07)}
@@ -497,11 +501,26 @@ function table(){
 
   $('#rows').textContent = rows.length + ' of ' + CF.length;
   $('#tbody').innerHTML = rows.map(c => {
+    const LBL = {public:['p-pub','Public'], supporters:['p-sup','Supporters'], private:['p-priv','Private']};
     let out = '<span class="pill p-priv">—</span>';
-    if (c.live) out = '<span class="pill p-live">On the board</span>';
-    else if (c.release==='public')     out = '<span class="pill p-pub">Public</span>';
-    else if (c.release==='supporters') out = '<span class="pill p-sup">Supporters</span>';
-    else if (c.release==='private')    out = '<span class="pill p-priv">Private</span>';
+    if (c.live) {
+      out = '<span class="pill p-live">On the board</span>';
+    } else if (c.vote && c.release && LBL[c.release]) {
+      // Solid pill ONLY where a vote was actually read. Two entries carry a
+      // `release` reconstructed from chat long before this field existed; they
+      // must fall through to `destination` or the tooltip would claim a tally
+      // nobody ever saw.
+      const [k,l] = LBL[c.release];
+      out = `<span class="pill ${k}" title="From the release vote, read in this crowdfund's own channel.">${l}</span>`;
+    } else if (c.destination && LBL[c.destination.where]) {
+      // No readable vote. Where the output landed, per the public record --
+      // a weaker and slightly different claim, so it is marked as one.
+      const [k,l] = LBL[c.destination.where];
+      const why = (c.destination.confidence === 'strong'
+        ? 'The creator or a moderator said so' : 'Members only, no creator statement')
+        + '. Where the output landed, not a vote tally.';
+      out = `<span class="pill ${k} inf" title="${esc(why)}">${l}</span>`;
+    }
 
     const back = c.vote ? c.vote.total + ' <span style="color:var(--ink-3);font-size:11px">voted</span>'
               : c.signups ? c.signups + ' <span style="color:var(--ink-3);font-size:11px">signed</span>'
