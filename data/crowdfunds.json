@@ -90,7 +90,7 @@
       "name": "Shadow Company Heavy Outfit",
       "creator": "YourMomsChestHair",
       "announced": "chat",
-      "note": "$10 buy-in. The post that threatened kicks for non-payment.",
+      "note": "$10 buy-in. The post that threatened kicks for not following through.",
       "src": "1313256555994681406",
       "destination": {
         "where": "public",
@@ -1142,7 +1142,7 @@
         "days": 57,
         "exclusiveMentions": 6
       },
-      "note": "Creator runs its confirmed channel and its payments (msg 1459523762943824090).",
+      "note": "Creator runs its confirmed channel and confirms its supporters (msg 1459523762943824090).",
       "destination": {
         "where": "supporters",
         "confidence": "vote",
