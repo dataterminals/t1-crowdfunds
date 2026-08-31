@@ -40,7 +40,7 @@
       "name": "Alex \"Echo 3-1\" gear pack",
       "creator": "FlawlyBoy",
       "announced": "chat",
-      "note": "CoD MW19 character kit. The announcement names no modder; the release announcement does — “The Alex Crowdfund by the legendary FlawlyBoy is now live on nexus” (msg 1320181570610659340, Nexus mod 1128).",
+      "note": "CoD MW19 character kit. The announcement named no modder — the release did.",
       "src": "1307805326631768124",
       "destination": {
         "where": "public",
@@ -58,7 +58,7 @@
       "creator": "SB-4",
       "announced": "chat",
       "src": "1309770589795520592",
-      "note": "Named 2026-08-30 from a moderator's list: SB-4's crowdfund was the MCX Spear LT, capped at 10 buy-ins, no confirmed channel, released public (Nexus 1125).",
+      "note": "SB-4's project, capped at 10 buy-ins.",
       "members": 14,
       "vote": {
         "question": "Release.",
@@ -145,7 +145,7 @@
       "announced": "chat",
       "release": "private",
       "src": "1349505166176555060",
-      "note": "Same crowdfund as #8, counted twice: #6 was reconstructed from chat, #8 from the announcement. Both rows kept so the citations survive — era 1 is 23 rows, 22 distinct projects. Stayed private over asset copyright.",
+      "note": "The same crowdfund as #8, recorded twice from two different sources.",
       "destination": {
         "where": "private",
         "confidence": "strong",
@@ -160,7 +160,7 @@
       "name": null,
       "creator": "YourMomsChestHair",
       "announced": "everyone",
-      "note": "“a new weapon” — never named again, and still unnamed after the 2026-08-24 sweep. Absent from YourMomsChestHair’s own list of open buy-ins six days later (msg 1318754880512327691), so it may have collapsed early.",
+      "note": "Announced only as “a new weapon” and never named again. It may have collapsed before it ran.",
       "src": "1316621603978874991"
     },
     {
@@ -170,7 +170,7 @@
       "name": "GZW (Gray Zone Warfare) gear pack",
       "creator": "FlawlyBoy",
       "announced": "everyone",
-      "note": "Announced only as “a new gear pack”; named 2026-08-24 from FlawlyBoy calling it “my gzw project” (msg 1320189637448433747). Same crowdfund as #6, which was reconstructed from chat while this row came from the announcement.",
+      "note": "Announced only as “a new gear pack”. Its creator later called it his GZW project.",
       "src": "1316829668674109511",
       "destination": {
         "where": "private",
@@ -751,7 +751,7 @@
       "creator": "YourMomsChestHair",
       "announced": "everyone",
       "src": "1407147347590250516",
-      "note": "The announcement read “some beautiful White Moon assets” and an earlier pass took the vendor for the project. White Moon Studio sells the assets; the channel pair, the role and every member reference say To the Moon (msg 1409115547068534904).",
+      "note": "White Moon is the asset studio. The crowdfund itself was called To the Moon.",
       "destination": {
         "where": "supporters",
         "confidence": "vote",
@@ -841,7 +841,7 @@
       "name": "Steyr",
       "creator": "Agent/07",
       "announced": "everyone",
-      "note": "Name recovered from a neighbouring GRB server, where a member listed what was live on 2025-09-24 — “the Metal Gear Solid/XOF and the Steyr Crowdfund”.",
+      "note": "Its own post was gone; the name survived in a neighbouring Ghost Recon server.",
       "src": "1420518885261836368",
       "destination": {
         "where": "public",
@@ -1094,7 +1094,6 @@
         "days": 189,
         "exclusiveMentions": 1
       },
-      "note": "Creator named in a showcase thread, msg 1472093680142778496.",
       "destination": {
         "where": "supporters",
         "confidence": "vote",
@@ -1142,7 +1141,6 @@
         "days": 57,
         "exclusiveMentions": 6
       },
-      "note": "Creator runs its confirmed channel and confirms its supporters (msg 1459523762943824090).",
       "destination": {
         "where": "supporters",
         "confidence": "vote",
@@ -1344,7 +1342,7 @@
       "name": "Recce",
       "creator": "MercerBlack™",
       "announced": "everyone",
-      "note": "South African special forces. Recovered 2026-08-24 from members naming it while it ran (msg 1485209464712859778) and from MercerBlack crediting its role for the SANDF weapon release (msg 1490767344023371957).",
+      "note": "South African special forces kit — Vektor rifles, SANDF beret, Beretta 92F.",
       "src": "1466653752671998073",
       "destination": {
         "where": "public",
@@ -1382,7 +1380,7 @@
       "creator": "𝐵𝑂𝑁𝐹𝐼𝑅𝐸",
       "announced": "everyone",
       "src": "1471150705279635664",
-      "note": "Recovered 2026-08-24: an exclusive traced to “Bon's latest crowdfund” beside this post's own link (msg 1483922818759528478); members refer to holding “the blackbird role”. Unrelated to the member who signs patches “By BlackBird”.",
+      "note": "Released as individual mods rather than under the Blackbird name, which is why it is hard to find.",
       "destination": {
         "where": "public",
         "confidence": "vote",
@@ -1419,7 +1417,7 @@
       "name": "Cold Ops Carbonara",
       "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
       "announced": "everyone",
-      "note": "Named the day it was announced (msg 1473362715845070901) — which is what “time for some cold pasta” meant. Publicly released by its creator, May 2026.",
+      "note": "The “time for some cold pasta” announcement.",
       "src": "1473153883223097385",
       "destination": {
         "where": "public",
@@ -1457,7 +1455,7 @@
       "creator": "ViruS + SexyCouchPotato",
       "announced": "everyone",
       "src": "1475620200865861703",
-      "note": "The first two-creator crowdfund — “the first tag-team CF Project” (msg 1502351245107789874). Named a day after the announcement (msg 1475996442270109739).",
+      "note": "The first crowdfund with two creators working together.",
       "destination": {
         "where": "public",
         "confidence": "vote",
@@ -1493,7 +1491,7 @@
       "name": "Crye Babies",
       "creator": "YourMomsChestHair",
       "announced": "everyone",
-      "note": "Name recovered from the announcement graphic; corrected to the plural 2026-08-24 from the creator's own release header, “CRYE BABIES SUPPORTER RELEASE” (msg 1487141790770532525).",
+      "note": "The creator's own release calls it Crye Babies, plural.",
       "src": "1477053851323596881",
       "destination": {
         "where": "supporters",
@@ -1567,7 +1565,6 @@
       "name": "Wolf Pack",
       "creator": "𝐵𝑂𝑁𝐹𝐼𝑅𝐸",
       "announced": "everyone",
-      "note": "Creator identified 2026-08-30: three Nexus mods posted in a row with “thank everyone in wolfpack!” (msg 1502850378373271692).",
       "src": "1488686115144728666",
       "destination": {
         "where": "public",
@@ -1604,7 +1601,7 @@
       "name": "Forgotten Weapons",
       "creator": "MercerBlack™",
       "announced": "everyone",
-      "note": "The “FW” monogram on the title card. Named in chat five minutes after the announcement (msg 1490990928406773921) and bound to this post by MercerBlack (msg 1491516204358176919).",
+      "note": "FW is Forgotten Weapons — five obscure guns and a working RMR.",
       "src": "1490990637577797753",
       "destination": {
         "where": "public",
@@ -1891,7 +1888,7 @@
       "name": "Salomon X4 Ultra Mid GTX",
       "creator": "YourMomsChestHair",
       "announced": "chat",
-      "note": "Recovered 2026-08-30 from a moderator's channel-by-channel list; it appears in no announcement this account can read. 18 buy-ins, no confirmed channel, released public. Numbered 58 because the catalogue's numbers are identifiers, not a chronological rank -- renumbering would break every citation. It belongs in era 1. Date is a placeholder.",
+      "note": "Turned up only in a moderator's channel list; it was never announced anywhere public. 18 buy-ins.",
       "release": "public",
       "destination": {
         "where": "public",
