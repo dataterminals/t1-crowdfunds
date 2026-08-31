@@ -12,7 +12,7 @@
       "body": "A crowdfund's release vote and its delivery record both live inside that crowdfund's own paid channel, readable only by people who backed it. These 11 are what is visible from a single supporter's account. Covering the whole catalogue would take someone who backed every crowdfund in the roles system, or a server admin. Everything in these two sections is therefore a sample, not the population — the catalogue below is complete, the depth is not."
     },
     "destinationNote": "`destination` is where a crowdfund's output landed, reconstructed 2026-08-30 from public channels, Nexus and the supporter armoury. It is NOT the same claim as `vote`: broader, weaker, and not always what the vote said, because some votes cover only part of a project. confidence: vote = read from the crowdfund's own channel; strong = the creator or a moderator said so; moderate = members only.",
-    "votesNote": "Vote tallies and member counts for 40 crowdfunds were supplied by a Tier 1 moderator on 2026-08-30 after a read-only role was declined -- the objection was to channel access, not to the numbers. Validated 11/11 exactly against the votes this account can read first-hand. `members` is the confirmed channel's membership, i.e. the paid backers; turnout was previously only a floor on it."
+    "votesNote": "Vote tallies and member counts for 40 crowdfunds were supplied by a Tier 1 moderator on 2026-08-30 after a read-only role was declined — the objection was to channel access, not to the numbers. He compiled them by going through the confirmed channels himself, counting members by hand where no count was shown, and copy-pasting a line per crowdfund with the numbers edited in. Validated 11/11 exactly against the votes this account can read first-hand. Every figure here is a crowdfund's own tally, never the summary sentence beside it — the one error in the file was a summary line left stale by that copy-paste, caught because it disagreed with its own numbers. `members` is the confirmed channel's membership, i.e. the paid backers."
   },
   "crowdfunds": [
     {
@@ -1386,8 +1386,8 @@
       "destination": {
         "where": "public",
         "confidence": "vote",
-        "src": "1543764047386910781",
-        "note": "Vote 40 public / 15 supporter. See vote.note -- the source's result line disagrees with its own tally."
+        "src": "1543793745684603011",
+        "note": "Public, 40–15. Verified from a screenshot of the closed poll. Bonfire appears to have released the items individually rather than under the Blackbird name, which is why members reported it as public but could not find it."
       },
       "members": 83,
       "vote": {
@@ -1407,8 +1407,8 @@
         "total": 55,
         "winner": "public",
         "basis": "moderator",
-        "src": "1543764047386910781",
-        "note": "The source file states 'Supporter Armory Release' but its own numbers are 40 public against 15 supporter. Taken as public: the numbers agree with the independent public-record evidence (msg 1483556816523755590), so the result line reads as a slip. Worth one confirming question."
+        "src": "1543793745684603011",
+        "note": "Confirmed against a screenshot of the poll itself (2026-08-31): “Where to release.” — Public 40 (73%), Tier 2 15 (27%), 55 votes, closed. The compiler's summary line had said Supporter Armory; his numbers were right and the sentence was wrong."
       },
       "release": "public"
     },
