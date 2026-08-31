@@ -255,7 +255,7 @@ footer a:hover{color:var(--oxide);border-color:var(--oxide)}
 
   <section>
     <div class="head"><span class="num">02</span><h2>Where it went</h2></div>
-    <p class="sub">A crowdfund does not have one destination. A vote inside the paid channel decides where <em>the voted portion</em> goes — sometimes the project, sometimes a named subset of it — while exclusives never leave the crowdfund at all. Only people who paid can cast the vote, so turnout is also a hard floor on that project's paying membership.</p>
+    <p class="sub">A crowdfund does not have one destination. A vote inside the paid channel decides where <em>the voted portion</em> goes — sometimes the project, sometimes a named subset of it — while exclusives never leave the crowdfund at all. Only people who paid can cast the vote. Where a membership figure sits beside a turnout, that is how many actually paid — turnout used to be the only proxy for it, and was always a floor.</p>
     <div class="plate chamfer chart body-gap">
       <div class="coverage" id="cov-votes"></div>
       <div class="dests" id="dests"></div>
@@ -367,7 +367,8 @@ function render(d){
     kpi(CF.length + '<small>+</small>', 'Crowdfunds run', named + ' named, ' + (CF.length-named) + ' whose name did not survive'),
     kpi(live.length, 'On the board now', live.reduce((n,c)=>n+(c.signups||0),0).toLocaleString() + ' people signed up between them'),
     kpi(d.cohort.distinct, 'Distinct backers', 'Across the crowdfunds still posted'),
-    kpi(votes.toLocaleString(), 'Paid votes counted', 'Floor on money in — ' + voted.length + ' projects measurable'),
+    kpi(votes.toLocaleString(), 'Paid votes counted', voted.length + ' of ' + CF.length + ' crowdfunds, tallies supplied by a moderator'),
+    kpi(CF.reduce((n,c) => n + (c.members || 0), 0).toLocaleString(), 'Paid memberships', 'Backers across ' + CF.filter(c => c.members).length + ' confirmed channels'),
     kpi(totalPosts, 'Deliveries after the vote', 'Separate drops to backers, over ' + minD + '–' + maxD + ' days per crowdfund')
   ].join('');
 
@@ -522,9 +523,14 @@ function table(){
       out = `<span class="pill ${k} inf" title="${esc(why)}">${l}</span>`;
     }
 
-    const back = c.vote ? c.vote.total + ' <span style="color:var(--ink-3);font-size:11px">voted</span>'
-              : c.signups ? c.signups + ' <span style="color:var(--ink-3);font-size:11px">signed</span>'
-              : '<span style="color:var(--ink-3)">—</span>';
+    // `members` is the confirmed channel's membership -- the people who actually
+    // paid. Turnout used to be the only proxy for it, and was always a floor.
+    const back = c.vote
+      ? c.vote.total + ' <span style="color:var(--ink-3);font-size:11px">voted</span>'
+        + (c.members ? ` <span style="color:var(--ink-3);font-size:11px">of ${c.members}</span>` : '')
+      : c.signups ? c.signups + ' <span style="color:var(--ink-3);font-size:11px">signed</span>'
+      : c.members ? c.members + ' <span style="color:var(--ink-3);font-size:11px">paid</span>'
+      : '<span style="color:var(--ink-3)">—</span>';
 
     return `<tr>
       <td class="n">${c.n}</td>

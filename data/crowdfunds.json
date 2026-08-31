@@ -11,7 +11,8 @@
       "heading": "Why 11 of 57",
       "body": "A crowdfund's release vote and its delivery record both live inside that crowdfund's own paid channel, readable only by people who backed it. These 11 are what is visible from a single supporter's account. Covering the whole catalogue would take someone who backed every crowdfund in the roles system, or a server admin. Everything in these two sections is therefore a sample, not the population — the catalogue below is complete, the depth is not."
     },
-    "destinationNote": "`destination` is where a crowdfund's output landed, reconstructed 2026-08-30 from public channels, Nexus and the supporter armoury. It is NOT the same claim as `vote`: broader, weaker, and not always what the vote said, because some votes cover only part of a project. confidence: vote = read from the crowdfund's own channel; strong = the creator or a moderator said so; moderate = members only."
+    "destinationNote": "`destination` is where a crowdfund's output landed, reconstructed 2026-08-30 from public channels, Nexus and the supporter armoury. It is NOT the same claim as `vote`: broader, weaker, and not always what the vote said, because some votes cover only part of a project. confidence: vote = read from the crowdfund's own channel; strong = the creator or a moderator said so; moderate = members only.",
+    "votesNote": "Vote tallies and member counts for 40 crowdfunds were supplied by a Tier 1 moderator on 2026-08-30 after a read-only role was declined -- the objection was to channel access, not to the numbers. Validated 11/11 exactly against the votes this account can read first-hand. `members` is the confirmed channel's membership, i.e. the paid backers; turnout was previously only a floor on it."
   },
   "crowdfunds": [
     {
@@ -46,33 +47,78 @@
         "confidence": "strong",
         "src": "1320181570610659340",
         "note": "Release announcement: “now live on nexus”, Nexus 1128."
-      }
+      },
+      "members": 14
     },
     {
       "n": 3,
       "era": 1,
       "date": "2024-11-23",
-      "name": null,
+      "name": "MCX Spear LT",
       "creator": "SB-4",
       "announced": "chat",
       "src": "1309770589795520592",
-      "note": "Announced only as “another crowdfund project that will be by SB-4”. Still unnamed after the 2026-08-24 sweep — SB-4 had an HK437, an MCX Spear LT and a Rotex suppressor in flight that month, none confirmed as the crowdfunded one."
+      "note": "Named 2026-08-30 from a moderator's list: SB-4's crowdfund was the MCX Spear LT, capped at 10 buy-ins, no confirmed channel, released public (Nexus 1125).",
+      "members": 14,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 10
+          }
+        ],
+        "total": 10,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public",
+      "destination": {
+        "where": "public",
+        "confidence": "strong",
+        "src": "1543764047386910781",
+        "note": "Moderator's list, with the Nexus link."
+      }
     },
     {
       "n": 4,
       "era": 1,
       "date": "2024-12-02",
       "name": "Shadow Company Heavy Outfit",
-      "creator": null,
+      "creator": "YourMomsChestHair",
       "announced": "chat",
       "note": "$10 buy-in. The post that threatened kicks for non-payment.",
       "src": "1313256555994681406",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1453414668054823004",
-        "note": "Members point newcomers at Nexus for it; no creator statement found."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 119,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 63
+          },
+          {
+            "label": "Keep private",
+            "count": 8
+          }
+        ],
+        "total": 71,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 5,
@@ -84,10 +130,10 @@
       "announced": "chat",
       "src": "1318754880512327691",
       "destination": {
-        "where": "public",
-        "confidence": "moderate",
-        "src": "1514474115585802330",
-        "note": "“Price's Ghillied up” on Nexus 1175."
+        "where": null,
+        "confidence": "disputed",
+        "src": "1543764047386910781",
+        "note": "Was inferred 'public' from a Nexus 'Price's Ghillied Up'. The moderator file says the Price was one of three options in Crowdfund Project 1, took 3 votes of 34, and 'I don't think Chest ended up making the Price' -- so the Nexus mod may be unrelated. Downgraded to unknown."
       }
     },
     {
@@ -167,10 +213,31 @@
       "src": "1331300784599728188",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1507342127573504140",
-        "note": "Nexus 1560, named as Acosta's Chimera Bridge."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 24,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 9
+          },
+          {
+            "label": "Keep private",
+            "count": 6
+          }
+        ],
+        "total": 15,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 12,
@@ -199,10 +266,31 @@
       "src": "1349440792007278703",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1384545698908864764",
-        "note": "Nexus 1424."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 38,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 14
+          },
+          {
+            "label": "Keep private",
+            "count": 8
+          }
+        ],
+        "total": 22,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 14,
@@ -214,10 +302,31 @@
       "src": "1355682150719951068",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1483885420570869830",
-        "note": "Named with its Nexus link (1549) by the announcer."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 25,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 17
+          },
+          {
+            "label": "Keep private",
+            "count": 5
+          }
+        ],
+        "total": 22,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 15,
@@ -229,10 +338,31 @@
       "src": "1359291748144119898",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1499979757033488555",
-        "note": "“the FCPC Slickster from Chest on nexus”, Nexus 1316."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 50,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 33
+          },
+          {
+            "label": "Keep private",
+            "count": 2
+          }
+        ],
+        "total": 35,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 16,
@@ -241,7 +371,34 @@
       "name": "Next Generation Ghost's Gear",
       "creator": "YourMomsChestHair",
       "announced": "everyone",
-      "src": "1360895696894693396"
+      "src": "1360895696894693396",
+      "members": 96,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 55
+          },
+          {
+            "label": "Keep private",
+            "count": 5
+          }
+        ],
+        "total": 60,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public",
+      "destination": {
+        "where": "public",
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      }
     },
     {
       "n": 17,
@@ -253,10 +410,31 @@
       "src": "1369345583709552750",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1542679010465677352",
-        "note": "Nexus 1413."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 35,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 28
+          },
+          {
+            "label": "Keep private",
+            "count": 2
+          }
+        ],
+        "total": 30,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 18,
@@ -268,10 +446,31 @@
       "src": "1370159031775268944",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1380878016221155358",
-        "note": "Its own creator posted the Nexus link (1404)."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 28,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 23
+          },
+          {
+            "label": "Keep private",
+            "count": 2
+          }
+        ],
+        "total": 25,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 19,
@@ -283,10 +482,35 @@
       "src": "1372703221805481984",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1414957880364236832",
-        "note": "“the Warfare Crowdfund was made public” — a moderator, contrasting it with To the Moon."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 205,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 53
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 22
+          },
+          {
+            "label": "Keep private",
+            "count": 5
+          }
+        ],
+        "total": 80,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 20,
@@ -298,10 +522,31 @@
       "src": "1383200543043883179",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1510392112817111120",
-        "note": "“Gazza's BREN 3 (Nexus)”."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 56,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 31
+          },
+          {
+            "label": "Keep private",
+            "count": 5
+          }
+        ],
+        "total": 36,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 21,
@@ -313,10 +558,31 @@
       "src": "1385507734392406037",
       "destination": {
         "where": "supporters",
-        "confidence": "strong",
-        "src": "1522278167279042560",
-        "note": "“the Haenel 556 in Supporter Armory” — a modder; three members agree."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 88,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Supporter Armoury",
+            "count": 57
+          },
+          {
+            "label": "Keep private",
+            "count": 4
+          }
+        ],
+        "total": 61,
+        "winner": "supporters",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "supporters"
     },
     {
       "n": 22,
@@ -329,10 +595,35 @@
       "src": "1391022434211069993",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1411768422395805706",
-        "note": "“The public release of [Modder K]'s fantastic SA-58 mod” — a moderator, with the download."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 52,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 25
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 20
+          },
+          {
+            "label": "Keep private",
+            "count": 0
+          }
+        ],
+        "total": 45,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 23,
@@ -345,10 +636,35 @@
       "src": "1392009113185030288",
       "destination": {
         "where": "supporters",
-        "confidence": "strong",
-        "src": "1541628187895795822",
-        "note": "“the frogman cf supporter armory release”; also “voted to be released in Tier 2 armory” (1413651144026099755)."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 117,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 36
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 38
+          },
+          {
+            "label": "Keep private",
+            "count": 0
+          }
+        ],
+        "total": 74,
+        "winner": "supporters",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "supporters"
     },
     {
       "n": 24,
@@ -361,10 +677,35 @@
       "src": "1399642502708858933",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1478138630139543864",
-        "note": "“crowdfunded and voted to go public last year” — a moderator, posting it."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 57,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 26
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 6
+          },
+          {
+            "label": "Keep private",
+            "count": 2
+          }
+        ],
+        "total": 34,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 25,
@@ -376,10 +717,31 @@
       "src": "1405434369497108561",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1516773136731869265",
-        "note": "Nexus 1578."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 87,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 50
+          },
+          {
+            "label": "Keep private",
+            "count": 14
+          }
+        ],
+        "total": 64,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 26,
@@ -392,10 +754,35 @@
       "note": "The announcement read “some beautiful White Moon assets” and an earlier pass took the vendor for the project. White Moon Studio sells the assets; the channel pair, the role and every member reference say To the Moon (msg 1409115547068534904).",
       "destination": {
         "where": "supporters",
-        "confidence": "strong",
-        "src": "1414957880364236832",
-        "note": "“voted to be made private for Tier 2 and above only” — a moderator; also 1422746736690200616."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 253,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 36
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 93
+          },
+          {
+            "label": "Keep private",
+            "count": 0
+          }
+        ],
+        "total": 129,
+        "winner": "supporters",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "supporters"
     },
     {
       "n": 27,
@@ -423,7 +810,12 @@
           }
         ],
         "total": 99,
-        "winner": "public"
+        "winner": "public",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "public",
       "delivery": {
@@ -439,7 +831,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 246
     },
     {
       "n": 28,
@@ -451,11 +844,32 @@
       "note": "Name recovered from a neighbouring GRB server, where a member listed what was live on 2025-09-24 — “the Metal Gear Solid/XOF and the Steyr Crowdfund”.",
       "src": "1420518885261836368",
       "destination": {
-        "where": "supporters",
-        "confidence": "strong",
-        "src": "1540831080092008579",
-        "note": "“the Steyr DMR is in our supporter armory” — a modder; two members agree."
-      }
+        "where": "public",
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30. Supersedes 'supporters', which the public-record sweep had inferred."
+      },
+      "members": 119,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 64
+          },
+          {
+            "label": "Keep private",
+            "count": 20
+          }
+        ],
+        "total": 84,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 29,
@@ -479,7 +893,12 @@
           }
         ],
         "total": 144,
-        "winner": "public"
+        "winner": "public",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "public",
       "delivery": {
@@ -495,7 +914,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 244
     },
     {
       "n": 30,
@@ -520,7 +940,12 @@
           }
         ],
         "total": 54,
-        "winner": "supporters"
+        "winner": "supporters",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "supporters",
       "delivery": {
@@ -536,7 +961,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 79
     },
     {
       "n": 31,
@@ -560,7 +986,12 @@
           }
         ],
         "total": 55,
-        "winner": "public"
+        "winner": "public",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "public",
       "delivery": {
@@ -576,7 +1007,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 75
     },
     {
       "n": 32,
@@ -600,7 +1032,12 @@
           }
         ],
         "total": 72,
-        "winner": "supporters"
+        "winner": "supporters",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "supporters",
       "delivery": {
@@ -616,7 +1053,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 131
     },
     {
       "n": 33,
@@ -640,7 +1078,12 @@
           }
         ],
         "total": 61,
-        "winner": "supporters"
+        "winner": "supporters",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "supporters",
       "delivery": {
@@ -657,7 +1100,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 84
     },
     {
       "n": 34,
@@ -682,7 +1126,12 @@
           }
         ],
         "total": 48,
-        "winner": "supporters"
+        "winner": "supporters",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "supporters",
       "delivery": {
@@ -699,7 +1148,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 56
     },
     {
       "n": 35,
@@ -724,7 +1174,12 @@
           }
         ],
         "total": 275,
-        "winner": "supporters"
+        "winner": "supporters",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "supporters",
       "delivery": {
@@ -740,7 +1195,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 435
     },
     {
       "n": 36,
@@ -765,7 +1221,12 @@
           }
         ],
         "total": 58,
-        "winner": "supporters"
+        "winner": "supporters",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "supporters",
       "delivery": {
@@ -781,7 +1242,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 87
     },
     {
       "n": 37,
@@ -805,7 +1267,12 @@
           }
         ],
         "total": 103,
-        "winner": "supporters"
+        "winner": "supporters",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "supporters",
       "delivery": {
@@ -821,7 +1288,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 197
     },
     {
       "n": 38,
@@ -845,7 +1313,12 @@
           }
         ],
         "total": 149,
-        "winner": "public"
+        "winner": "public",
+        "corroborated": {
+          "by": "moderator",
+          "src": "1543764047386910781",
+          "agrees": true
+        }
       },
       "release": "public",
       "delivery": {
@@ -861,7 +1334,8 @@
         "confidence": "vote",
         "src": null,
         "note": "From the release vote read in the crowdfund's own channel."
-      }
+      },
+      "members": 244
     },
     {
       "n": 39,
@@ -874,10 +1348,31 @@
       "src": "1466653752671998073",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1490767344023371957",
-        "note": "Its creator posted the Nexus links, crediting the crowdfund's own role."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 57,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 33
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 7
+          }
+        ],
+        "total": 40,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 40,
@@ -890,10 +1385,32 @@
       "note": "Recovered 2026-08-24: an exclusive traced to “Bon's latest crowdfund” beside this post's own link (msg 1483922818759528478); members refer to holding “the blackbird role”. Unrelated to the member who signs patches “By BlackBird”.",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1483556816523755590",
-        "note": "“some of the blackbird guns were released publicly”."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "Vote 40 public / 15 supporter. See vote.note -- the source's result line disagrees with its own tally."
+      },
+      "members": 83,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 40
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 15
+          }
+        ],
+        "total": 55,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781",
+        "note": "The source file states 'Supporter Armory Release' but its own numbers are 40 public against 15 supporter. Taken as public: the numbers agree with the independent public-record evidence (msg 1483556816523755590), so the result line reads as a slip. Worth one confirming question."
+      },
+      "release": "public"
     },
     {
       "n": 41,
@@ -906,10 +1423,31 @@
       "src": "1473153883223097385",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1507031310512685106",
-        "note": "Its creator: “Public release of Cold Ops Carbonara”, Nexus 1909 and 1911."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 165,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 74
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 29
+          }
+        ],
+        "total": 103,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 42,
@@ -922,10 +1460,31 @@
       "note": "The first two-creator crowdfund — “the first tag-team CF Project” (msg 1502351245107789874). Named a day after the announcement (msg 1475996442270109739).",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1502351245107789874",
-        "note": "Its creators announced the public release with the Nexus page."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 115,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 41
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 21
+          }
+        ],
+        "total": 62,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 43,
@@ -938,10 +1497,31 @@
       "src": "1477053851323596881",
       "destination": {
         "where": "supporters",
-        "confidence": "strong",
-        "src": "1519304413871607929",
-        "note": "“From SUPPORTER RELEASE CRYE BABIES”; creator's own header is “CRYE BABIES SUPPORTER RELEASE” (1487141790770532525)."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 278,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 54
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 99
+          }
+        ],
+        "total": 153,
+        "winner": "supporters",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "supporters"
     },
     {
       "n": 44,
@@ -954,10 +1534,31 @@
       "src": "1486926842483966024",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1543379307517313054",
-        "note": "“search spirited away on nexus”, Nexus 1877."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 237,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 78
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 62
+          }
+        ],
+        "total": 140,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 45,
@@ -970,10 +1571,31 @@
       "src": "1488686115144728666",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1502850378373271692",
-        "note": "Nexus 1878–1880 posted with “thank everyone in wolfpack!” — creator behaviour."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 117,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 64
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 22
+          }
+        ],
+        "total": 86,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 46,
@@ -986,10 +1608,31 @@
       "src": "1490990637577797753",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1503565360715141321",
-        "note": "Its creator thanked the backers and posted all five weapons on Nexus."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 75,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 37
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 10
+          }
+        ],
+        "total": 47,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 47,
@@ -1017,25 +1660,67 @@
       "note": "Name confirmed by a matching #supporter-armory thread.",
       "destination": {
         "where": "supporters",
-        "confidence": "moderate",
-        "src": "1535256951338963114",
-        "note": "“smokin aces supporter release”."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 156,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 37
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 61
+          }
+        ],
+        "total": 98,
+        "winner": "supporters",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "supporters"
     },
     {
       "n": 49,
       "era": 2,
       "date": "2026-05-15",
       "name": "Breach & Clear",
-      "creator": null,
+      "creator": "YourMomsChestHair",
       "announced": "everyone",
       "note": "Name read off the title card.",
       "destination": {
         "where": "public",
-        "confidence": "moderate",
-        "src": "1541567636511526922",
-        "note": "Nexus 1992."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 203,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 90
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 30
+          }
+        ],
+        "total": 120,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 50,
@@ -1081,10 +1766,31 @@
       "note": "Name read off the title card.",
       "destination": {
         "where": "public",
-        "confidence": "strong",
-        "src": "1535222964096729168",
-        "note": "Its creator posted Nexus 2039 — “thank the boys in time and tide cf”."
-      }
+        "confidence": "vote",
+        "src": "1543764047386910781",
+        "note": "From the release vote, supplied by a moderator with channel access on 2026-08-30."
+      },
+      "members": 109,
+      "vote": {
+        "question": "Release.",
+        "scope": "project",
+        "scopeNote": null,
+        "options": [
+          {
+            "label": "Public",
+            "count": 48
+          },
+          {
+            "label": "Supporter Armoury",
+            "count": 24
+          }
+        ],
+        "total": 72,
+        "winner": "public",
+        "basis": "moderator",
+        "src": "1543764047386910781"
+      },
+      "release": "public"
     },
     {
       "n": 53,
@@ -1176,6 +1882,23 @@
       ],
       "signups": 106,
       "src": "1541885741859078318"
+    },
+    {
+      "n": 58,
+      "era": 1,
+      "date": "2025-01-01",
+      "approx": true,
+      "name": "Salomon X4 Ultra Mid GTX",
+      "creator": "YourMomsChestHair",
+      "announced": "chat",
+      "note": "Recovered 2026-08-30 from a moderator's channel-by-channel list; it appears in no announcement this account can read. 18 buy-ins, no confirmed channel, released public. Numbered 58 because the catalogue's numbers are identifiers, not a chronological rank -- renumbering would break every citation. It belongs in era 1. Date is a placeholder.",
+      "release": "public",
+      "destination": {
+        "where": "public",
+        "confidence": "strong",
+        "src": "1543764047386910781",
+        "note": "Moderator's list: 'Result: Public Release in Mod Release'."
+      }
     }
   ],
   "cohort": {
