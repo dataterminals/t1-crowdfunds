@@ -382,14 +382,13 @@ function render(d){
     </div>`).join('') || '<p class="sub">Nothing is currently posted.</p>';
 
   /* ── release votes ──────────────────────────────────── */
-  const cov = d.meta.coverage;
-  if (cov) {
-    const html = `<div class="n">${esc(cov.heading)}</div><p>${esc(cov.body)}</p>`;
-    $('#cov-votes').innerHTML = html;
-    $('#cov-deliv').innerHTML = html;
-  } else {
-    ['#cov-votes','#cov-deliv'].forEach(x => $(x).remove());
-  }
+  // The votes section no longer needs a scope caveat: a moderator supplied
+  // tallies for 40 of the 58 on 2026-08-30. Delivery still does -- it is 11,
+  // and nothing has widened it. One note, on the section it is true of.
+  $('#cov-votes')?.remove();
+  const cov = d.meta.deliveryCoverage;
+  if (cov) $('#cov-deliv').innerHTML = `<div class="n">${esc(cov.heading)}</div><p>${esc(cov.body)}</p>`;
+  else $('#cov-deliv')?.remove();
 
   $('#dests').innerHTML = (d.destinations||[]).map(x =>
     `<div class="dest d-${esc(x.id)}"><h4>${esc(x.label)}</h4><div class="who">${esc(x.who)}</div><p>${esc(x.note)}</p></div>`).join('');

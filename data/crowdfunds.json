@@ -5,14 +5,14 @@
     "guildId": "1302392670181916722",
     "narrative": "https://github.com/dataterminals/grb-modding-knowledgebase/blob/main/reference/crowdfund-history.md",
     "note": "Era 1 is a recovered floor, not a count, and #6 and #8 are the same project counted twice — 23 rows, 22 distinct. System 2 is complete and, since 2026-08-24, completely named. See the Gaps panel.",
-    "coverage": {
-      "measured": 11,
-      "total": 57,
-      "heading": "Why 11 of 57",
-      "body": "A crowdfund's release vote and its delivery record both live inside that crowdfund's own paid channel, readable only by people who backed it. These 11 are what is visible from a single supporter's account. Covering the whole catalogue would take someone who backed every crowdfund in the roles system, or a server admin. Everything in these two sections is therefore a sample, not the population — the catalogue below is complete, the depth is not."
-    },
     "destinationNote": "`destination` is where a crowdfund's output landed, reconstructed 2026-08-30 from public channels, Nexus and the supporter armoury. It is NOT the same claim as `vote`: broader, weaker, and not always what the vote said, because some votes cover only part of a project. confidence: vote = read from the crowdfund's own channel; strong = the creator or a moderator said so; moderate = members only.",
-    "votesNote": "Vote tallies and member counts for 40 crowdfunds were supplied by a Tier 1 moderator on 2026-08-30 after a read-only role was declined — the objection was to channel access, not to the numbers. He compiled them by going through the confirmed channels himself, counting members by hand where no count was shown, and copy-pasting a line per crowdfund with the numbers edited in. Validated 11/11 exactly against the votes this account can read first-hand. Every figure here is a crowdfund's own tally, never the summary sentence beside it — the one error in the file was a summary line left stale by that copy-paste, caught because it disagreed with its own numbers. `members` is the confirmed channel's membership, i.e. the paid backers."
+    "votesNote": "Vote tallies and member counts for 40 crowdfunds were supplied by a Tier 1 moderator on 2026-08-30 after a read-only role was declined — the objection was to channel access, not to the numbers. He compiled them by going through the confirmed channels himself, counting members by hand where no count was shown, and copy-pasting a line per crowdfund with the numbers edited in. Validated 11/11 exactly against the votes this account can read first-hand. Every figure here is a crowdfund's own tally, never the summary sentence beside it — the one error in the file was a summary line left stale by that copy-paste, caught because it disagreed with its own numbers. `members` is the confirmed channel's membership, i.e. the paid backers.",
+    "deliveryCoverage": {
+      "measured": 11,
+      "total": 58,
+      "heading": "Why 11 of 58",
+      "body": "Delivery is the one thing nothing has widened. A crowdfund's drops happen inside its own paid channel, leave no public trace, and nobody keeps a running tally of them the way they keep a vote result — so these 11 are what a single supporter's account can see. The vote and destination figures above are near-complete; this section is not, and the two should not be read as having the same reach."
+    }
   },
   "crowdfunds": [
     {
