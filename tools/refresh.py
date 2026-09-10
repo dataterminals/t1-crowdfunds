@@ -116,6 +116,12 @@ def main() -> None:
     # catalogue stores in title case.
     by_name = {c["name"].casefold(): c for c in doc["crowdfunds"] if c.get("name")}
 
+    # The date these figures were read. Everything dated in this run -- the
+    # cohort's asOf and meta.updated -- carries this one stamp, so the two can
+    # never disagree. (It used to take the previous commit's date, which dated
+    # every refresh to the commit *before* it.)
+    stamp = dt.date.today().isoformat()
+
     board = get(port, tok, f"/history?channelId={BOARD}&limit=25&json=1")
     posts = board.get("messages", [])
     print(f"board: {len(posts)} live post(s)")
@@ -160,7 +166,7 @@ def main() -> None:
         counts = {u: sum(1 for s in sets.values() if u in s) for u in allu}
         k = len(sets)
         doc["cohort"] = {
-            "asOf": doc["meta"]["updated"],
+            "asOf": stamp,
             "basis": f"Exact reactor lists for the {k} crowdfunds live on this date, with the T1 Carl bot removed.",
             "distinct": len(allu),
             "signups": sum(len(s) for s in sets.values()),
@@ -209,9 +215,8 @@ def main() -> None:
         print(f"  new blood: {newest} ({age(newest)}d old)")
         print(f"cohort: {len(allu)} distinct across {k} crowdfunds")
 
-    today = subprocess.run(["git", "log", "-1", "--format=%cs"], capture_output=True,
-                           text=True, cwd=ROOT).stdout.strip()
-    doc["meta"]["updated"] = doc["meta"]["updated"] if args.dry_run else (today or doc["meta"]["updated"])
+    if not args.dry_run:
+        doc["meta"]["updated"] = stamp
 
     if args.dry_run:
         print("\n--dry-run: nothing written")
