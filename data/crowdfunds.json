@@ -1,15 +1,15 @@
 {
   "meta": {
-    "updated": "2026-08-30",
+    "updated": "2026-09-10",
     "guild": "Tier 1 Imports",
     "guildId": "1302392670181916722",
-    "note": "Era 1 is a recovered floor, not a count, and #6 and #8 are the same project counted twice — 23 rows, 22 distinct. System 2 is complete and, since 2026-08-24, completely named. See the Gaps panel.",
-    "destinationNote": "`destination` is where a crowdfund's output landed, reconstructed 2026-08-30 from public channels, Nexus and the supporter armoury. It is NOT the same claim as `vote`: broader, weaker, and not always what the vote said, because some votes cover only part of a project. confidence: vote = read from the crowdfund's own channel; strong = the creator or a moderator said so; moderate = members only.",
+    "note": "Era 1 is a recovered floor, not a count, and #6 and #8 are the same project counted twice — 24 rows, 23 distinct. System 2 is complete and, since 2026-08-24, completely named.",
+    "destinationNote": "`destination` is where a crowdfund's output landed, reconstructed 2026-08-30 from public channels, Nexus and the supporter armoury. It is NOT the same claim as `vote`: broader, weaker, and not always what the vote said, because some votes cover only part of a project. confidence: vote = read from the crowdfund's own channel; strong = the creator or a moderator said so; moderate = members only; disputed = the sources disagree, and `where` is left null.",
     "votesNote": "Vote tallies and member counts for 40 crowdfunds were supplied by a Tier 1 moderator on 2026-08-30 after a read-only role was declined — the objection was to channel access, not to the numbers. He compiled them by going through the confirmed channels himself, counting members by hand where no count was shown, and copy-pasting a line per crowdfund with the numbers edited in. Validated 11/11 exactly against the votes this account can read first-hand. Every figure here is a crowdfund's own tally, never the summary sentence beside it — the one error in the file was a summary line left stale by that copy-paste, caught because it disagreed with its own numbers. `members` is the confirmed channel's membership, i.e. the people who supported it.",
     "deliveryCoverage": {
       "measured": 11,
-      "total": 58,
-      "heading": "Why 11 of 58",
+      "total": 60,
+      "heading": "Why 11 of 60",
       "body": "Delivery is the one thing nothing has widened. A crowdfund's drops happen inside its own supporter channel, leave no public trace, and nobody keeps a running tally of them the way they keep a vote result — so these 11 are what a single supporter's account can see. The vote and destination figures above are near-complete; this section is not, and the two should not be read as having the same reach."
     }
   },
@@ -1638,7 +1638,7 @@
       "creator": "SAMI TECH SUPUMA",
       "announced": "everyone",
       "live": true,
-      "signups": 206,
+      "signups": 220,
       "items": [
         "Cyberpunk Character.",
         "Medical Mask.",
@@ -1726,7 +1726,7 @@
       "creator": "MercerBlack™",
       "announced": "everyone",
       "live": true,
-      "signups": 180,
+      "signups": 197,
       "items": [
         "Kawasaki 125cc Dirtbike",
         "KTM 1390 Super Duke 2026",
@@ -1744,7 +1744,7 @@
       "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
       "announced": "everyone",
       "live": true,
-      "signups": 137,
+      "signups": 145,
       "items": [
         "THOR NFM Plate Carrier",
         "VZ58 Sporter",
@@ -1793,9 +1793,8 @@
       "era": 2,
       "date": "2026-07-03",
       "name": "Rangers Lead The Way",
-      "creator": "urmomschesthair",
+      "creator": "YourMomsChestHair",
       "announced": "everyone",
-      "live": true,
       "signups": 420,
       "note": "Largest sign-up on record.",
       "items": [
@@ -1805,7 +1804,13 @@
         "Paltatac Opscore V3 Helmet Cover",
         "Haley Strategic Gustaf Bag Pack",
         "Viper Ghillie Hood"
-      ]
+      ],
+      "destination": {
+        "where": "supporters",
+        "confidence": "strong",
+        "src": "1544464453163024507",
+        "note": "Released 2026-09-01 to a #supporter-armory thread by the creator, addressed to the crowdfund's role. The vote itself is not readable from this account; chat calls some of the gear exclusive."
+      }
     },
     {
       "n": 54,
@@ -1815,7 +1820,7 @@
       "creator": "ViruS",
       "announced": "everyone",
       "live": true,
-      "signups": 333,
+      "signups": 357,
       "items": [
         "M4A1 Block II",
         "MK12 SPR",
@@ -1831,7 +1836,7 @@
       "creator": "Avetis",
       "announced": "everyone",
       "live": true,
-      "signups": 139,
+      "signups": 179,
       "items": [
         "LR308",
         "SRSA2",
@@ -1857,7 +1862,7 @@
         "Spiritus Systems LV-119, choose your loadout",
         "FN Five-Seven MK3 Switchable Sight"
       ],
-      "signups": 107
+      "signups": 171
     },
     {
       "n": 57,
@@ -1876,7 +1881,7 @@
         "Daniel Defence RIS III",
         "MCX Spear XM7"
       ],
-      "signups": 106,
+      "signups": 164,
       "src": "1541885741859078318"
     },
     {
@@ -1895,194 +1900,276 @@
         "src": "1543764047386910781",
         "note": "Moderator's list: 'Result: Public Release in Mod Release'."
       }
+    },
+    {
+      "n": 59,
+      "era": 2,
+      "date": "2026-09-04",
+      "name": "Spiritus Invictus",
+      "creator": "Mackle",
+      "announced": "everyone",
+      "note": "Announced as “Making Their Crowdfund Debut”. This creator’s first crowdfund — MARSOC kit.",
+      "src": "1545323100491743264",
+      "items": [
+        "Windbreaker",
+        "Crye CPC",
+        "Sphinx trousers",
+        "Salomon XA Forces Mid MKII Boots",
+        "Crye JPC 2.0 Maritime Swimmer Cut",
+        "S&S Precision Belt-M"
+      ],
+      "live": true,
+      "signups": 163
+    },
+    {
+      "n": 60,
+      "era": 2,
+      "date": "2026-09-10",
+      "name": "JSOC",
+      "creator": "YourMomsChestHair",
+      "announced": "everyone",
+      "note": "Announced as “JSOC would like a word”. Delta Force kit, posted nine days after this creator finished Rangers Lead The Way.",
+      "src": "1547723127604117677",
+      "items": [
+        "SNS Precision Plateframe Vest",
+        "Crye G3s Set",
+        "Team Wendy RifleTech Helmet",
+        "Spiritus Systems Delta Backpack"
+      ],
+      "live": true,
+      "signups": 50
     }
   ],
   "cohort": {
-    "asOf": "2026-08-30",
-    "basis": "Exact reactor lists for the 8 crowdfunds live on this date, with the T1 Carl bot removed.",
-    "distinct": 918,
-    "signups": 1628,
+    "asOf": "2026-09-10",
+    "basis": "Exact reactor lists for the 9 crowdfunds live on this date, with the T1 Carl bot removed.",
+    "distinct": 883,
+    "signups": 1646,
     "buckets": [
       {
-        "label": "1 of 8",
-        "people": 600
+        "label": "1 of 9",
+        "people": 578
       },
       {
-        "label": "2 of 8",
-        "people": 163
+        "label": "2 of 9",
+        "people": 138
       },
       {
-        "label": "3 of 8",
-        "people": 68
+        "label": "3 of 9",
+        "people": 65
       },
       {
-        "label": "4 of 8",
-        "people": 21
+        "label": "4 of 9",
+        "people": 33
       },
       {
-        "label": "5 of 8",
-        "people": 25
+        "label": "5 of 9",
+        "people": 18
       },
       {
-        "label": "6 of 8",
-        "people": 15
+        "label": "6 of 9",
+        "people": 13
       },
       {
-        "label": "7 of 8",
-        "people": 9
+        "label": "7 of 9",
+        "people": 14
       },
       {
-        "label": "8 of 8",
+        "label": "8 of 9",
         "people": 17
+      },
+      {
+        "label": "9 of 9",
+        "people": 7
       }
     ],
     "pairwise": [
       {
         "a": "CYBERSAMI",
         "b": "HEAVY METAL",
-        "shared": 58
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "Pastaslov",
-        "shared": 50
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "Rangers Lead The Way",
-        "shared": 76
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "GWOT Classics",
-        "shared": 55
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "Dealer's Choice",
-        "shared": 35
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "Flash Point",
-        "shared": 32
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "WMD",
-        "shared": 35
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Pastaslov",
-        "shared": 70
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Rangers Lead The Way",
-        "shared": 80
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "GWOT Classics",
-        "shared": 67
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Dealer's Choice",
-        "shared": 41
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Flash Point",
-        "shared": 35
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "WMD",
-        "shared": 34
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Rangers Lead The Way",
-        "shared": 95
-      },
-      {
-        "a": "Pastaslov",
-        "b": "GWOT Classics",
-        "shared": 68
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Dealer's Choice",
-        "shared": 42
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Flash Point",
-        "shared": 33
-      },
-      {
-        "a": "Pastaslov",
-        "b": "WMD",
-        "shared": 35
-      },
-      {
-        "a": "Rangers Lead The Way",
-        "b": "GWOT Classics",
-        "shared": 150
-      },
-      {
-        "a": "Rangers Lead The Way",
-        "b": "Dealer's Choice",
-        "shared": 76
-      },
-      {
-        "a": "Rangers Lead The Way",
-        "b": "Flash Point",
-        "shared": 64
-      },
-      {
-        "a": "Rangers Lead The Way",
-        "b": "WMD",
         "shared": 63
       },
       {
-        "a": "GWOT Classics",
+        "a": "CYBERSAMI",
+        "b": "Pastaslov",
+        "shared": 52
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "GWOT Classics",
+        "shared": 61
+      },
+      {
+        "a": "CYBERSAMI",
         "b": "Dealer's Choice",
-        "shared": 73
+        "shared": 46
       },
       {
-        "a": "GWOT Classics",
+        "a": "CYBERSAMI",
         "b": "Flash Point",
-        "shared": 56
+        "shared": 43
       },
       {
-        "a": "GWOT Classics",
+        "a": "CYBERSAMI",
         "b": "WMD",
-        "shared": 57
+        "shared": 43
       },
       {
-        "a": "Dealer's Choice",
+        "a": "CYBERSAMI",
+        "b": "Spiritus Invictus",
+        "shared": 44
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "JSOC",
+        "shared": 13
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Pastaslov",
+        "shared": 72
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "GWOT Classics",
+        "shared": 76
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Dealer's Choice",
+        "shared": 54
+      },
+      {
+        "a": "HEAVY METAL",
         "b": "Flash Point",
         "shared": 50
       },
       {
+        "a": "HEAVY METAL",
+        "b": "WMD",
+        "shared": 50
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Spiritus Invictus",
+        "shared": 47
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "JSOC",
+        "shared": 22
+      },
+      {
+        "a": "Pastaslov",
+        "b": "GWOT Classics",
+        "shared": 71
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Dealer's Choice",
+        "shared": 48
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Flash Point",
+        "shared": 49
+      },
+      {
+        "a": "Pastaslov",
+        "b": "WMD",
+        "shared": 44
+      },
+      {
+        "a": "Pastaslov",
+        "b": "Spiritus Invictus",
+        "shared": 49
+      },
+      {
+        "a": "Pastaslov",
+        "b": "JSOC",
+        "shared": 19
+      },
+      {
+        "a": "GWOT Classics",
+        "b": "Dealer's Choice",
+        "shared": 89
+      },
+      {
+        "a": "GWOT Classics",
+        "b": "Flash Point",
+        "shared": 80
+      },
+      {
+        "a": "GWOT Classics",
+        "b": "WMD",
+        "shared": 75
+      },
+      {
+        "a": "GWOT Classics",
+        "b": "Spiritus Invictus",
+        "shared": 68
+      },
+      {
+        "a": "GWOT Classics",
+        "b": "JSOC",
+        "shared": 29
+      },
+      {
+        "a": "Dealer's Choice",
+        "b": "Flash Point",
+        "shared": 79
+      },
+      {
         "a": "Dealer's Choice",
         "b": "WMD",
-        "shared": 49
+        "shared": 78
+      },
+      {
+        "a": "Dealer's Choice",
+        "b": "Spiritus Invictus",
+        "shared": 67
+      },
+      {
+        "a": "Dealer's Choice",
+        "b": "JSOC",
+        "shared": 27
       },
       {
         "a": "Flash Point",
         "b": "WMD",
-        "shared": 54
+        "shared": 81
+      },
+      {
+        "a": "Flash Point",
+        "b": "Spiritus Invictus",
+        "shared": 80
+      },
+      {
+        "a": "Flash Point",
+        "b": "JSOC",
+        "shared": 24
+      },
+      {
+        "a": "WMD",
+        "b": "Spiritus Invictus",
+        "shared": 74
+      },
+      {
+        "a": "WMD",
+        "b": "JSOC",
+        "shared": 25
+      },
+      {
+        "a": "Spiritus Invictus",
+        "b": "JSOC",
+        "shared": 36
       }
     ],
     "newBlood": {
-      "crowdfund": "Dealer's Choice",
-      "fresh": 39,
-      "of": 139,
-      "ageDays": 10
+      "crowdfund": "Flash Point",
+      "fresh": 32,
+      "of": 171,
+      "ageDays": 16
     }
   },
   "destinations": [
