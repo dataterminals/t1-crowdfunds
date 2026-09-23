@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-09-10",
+    "updated": "2026-09-22",
     "guild": "Tier 1 Imports",
     "guildId": "1302392670181916722",
     "note": "Era 1 is a recovered floor, not a count, and #6 and #8 are the same project counted twice — 24 rows, 23 distinct. System 2 is complete and, since 2026-08-24, completely named.",
@@ -8,8 +8,8 @@
     "votesNote": "Vote tallies and member counts for 40 crowdfunds were supplied by a Tier 1 moderator on 2026-08-30 after a read-only role was declined — the objection was to channel access, not to the numbers. He compiled them by going through the confirmed channels himself, counting members by hand where no count was shown, and copy-pasting a line per crowdfund with the numbers edited in. Validated 11/11 exactly against the votes this account can read first-hand. Every figure here is a crowdfund's own tally, never the summary sentence beside it — the one error in the file was a summary line left stale by that copy-paste, caught because it disagreed with its own numbers. `members` is the confirmed channel's membership, i.e. the people who supported it.",
     "deliveryCoverage": {
       "measured": 11,
-      "total": 60,
-      "heading": "Why 11 of 60",
+      "total": 61,
+      "heading": "Why 11 of 61",
       "body": "Delivery is the one thing nothing has widened. A crowdfund's drops happen inside its own supporter channel, leave no public trace, and nobody keeps a running tally of them the way they keep a vote result — so these 11 are what a single supporter's account can see. The vote and destination figures above are near-complete; this section is not, and the two should not be read as having the same reach."
     }
   },
@@ -1638,7 +1638,7 @@
       "creator": "SAMI TECH SUPUMA",
       "announced": "everyone",
       "live": true,
-      "signups": 220,
+      "signups": 234,
       "items": [
         "Cyberpunk Character.",
         "Medical Mask.",
@@ -1726,7 +1726,7 @@
       "creator": "MercerBlack™",
       "announced": "everyone",
       "live": true,
-      "signups": 197,
+      "signups": 213,
       "items": [
         "Kawasaki 125cc Dirtbike",
         "KTM 1390 Super Duke 2026",
@@ -1743,14 +1743,14 @@
       "name": "Pastaslov",
       "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
       "announced": "everyone",
-      "live": true,
       "signups": 145,
       "items": [
         "THOR NFM Plate Carrier",
         "VZ58 Sporter",
         "CZ P-09 C NOCTURNE",
         "A full Military Uniform"
-      ]
+      ],
+      "note": "Its post left the board between 2026-09-10 and 2026-09-22; the sign-up count is the last one read before it came down. No public release seen as of 2026-09-22."
     },
     {
       "n": 52,
@@ -1819,14 +1819,19 @@
       "name": "GWOT Classics",
       "creator": "ViruS",
       "announced": "everyone",
-      "live": true,
       "signups": 357,
       "items": [
         "M4A1 Block II",
         "MK12 SPR",
         "M2010 Sniper Rifle",
         "Kimber Custom TLE RL II 1911 and SureFire X300U-B"
-      ]
+      ],
+      "destination": {
+        "where": "supporters",
+        "confidence": "strong",
+        "src": "1546978784757026827",
+        "note": "Released 2026-09-08 to a “GWOT Classics | Supporters Release” thread by the creator — “yet another CF making its way to Supporters Armory”. The vote itself is not readable from this account."
+      }
     },
     {
       "n": 55,
@@ -1836,7 +1841,7 @@
       "creator": "Avetis",
       "announced": "everyone",
       "live": true,
-      "signups": 179,
+      "signups": 214,
       "items": [
         "LR308",
         "SRSA2",
@@ -1862,7 +1867,7 @@
         "Spiritus Systems LV-119, choose your loadout",
         "FN Five-Seven MK3 Switchable Sight"
       ],
-      "signups": 171
+      "signups": 214
     },
     {
       "n": 57,
@@ -1881,7 +1886,7 @@
         "Daniel Defence RIS III",
         "MCX Spear XM7"
       ],
-      "signups": 164,
+      "signups": 193,
       "src": "1541885741859078318"
     },
     {
@@ -1919,7 +1924,7 @@
         "S&S Precision Belt-M"
       ],
       "live": true,
-      "signups": 163
+      "signups": 216
     },
     {
       "n": 60,
@@ -1937,239 +1942,215 @@
         "Spiritus Systems Delta Backpack"
       ],
       "live": true,
-      "signups": 50
+      "signups": 205
+    },
+    {
+      "n": 61,
+      "era": 2,
+      "date": "2026-09-22",
+      "name": "The Great Pasta Heist",
+      "creator": "ᴇ Δ ᴡ ᴇ ʟ ʟ",
+      "announced": "everyone",
+      "note": "Announced as “You guys gotta earn that payday in the Great Pasta Heist”. This creator’s fourth crowdfund, after DS Arms SA 58 FAL, Cold Ops Carbonara and Pastaslov.",
+      "src": "1551998584717836320",
+      "items": [
+        "MRGSS S",
+        "Arcteryx Hoodie",
+        "Cargo Pants",
+        "Balaclava",
+        "AR57",
+        "Spiffy Suit"
+      ],
+      "live": true,
+      "signups": 45
     }
   ],
   "cohort": {
-    "asOf": "2026-09-10",
-    "basis": "Exact reactor lists for the 9 crowdfunds live on this date, with the T1 Carl bot removed.",
-    "distinct": 883,
-    "signups": 1646,
+    "asOf": "2026-09-22",
+    "basis": "Exact reactor lists for the 8 crowdfunds live on this date, with the T1 Carl bot removed.",
+    "distinct": 782,
+    "signups": 1534,
     "buckets": [
       {
-        "label": "1 of 9",
-        "people": 578
+        "label": "1 of 8",
+        "people": 481
       },
       {
-        "label": "2 of 9",
-        "people": 138
+        "label": "2 of 8",
+        "people": 132
       },
       {
-        "label": "3 of 9",
-        "people": 65
+        "label": "3 of 8",
+        "people": 55
       },
       {
-        "label": "4 of 9",
-        "people": 33
+        "label": "4 of 8",
+        "people": 35
       },
       {
-        "label": "5 of 9",
-        "people": 18
+        "label": "5 of 8",
+        "people": 30
       },
       {
-        "label": "6 of 9",
-        "people": 13
+        "label": "6 of 8",
+        "people": 19
       },
       {
-        "label": "7 of 9",
-        "people": 14
+        "label": "7 of 8",
+        "people": 20
       },
       {
-        "label": "8 of 9",
-        "people": 17
-      },
-      {
-        "label": "9 of 9",
-        "people": 7
+        "label": "8 of 8",
+        "people": 10
       }
     ],
     "pairwise": [
       {
         "a": "CYBERSAMI",
         "b": "HEAVY METAL",
-        "shared": 63
+        "shared": 70
       },
       {
         "a": "CYBERSAMI",
-        "b": "Pastaslov",
-        "shared": 52
+        "b": "Dealer's Choice",
+        "shared": 58
       },
       {
         "a": "CYBERSAMI",
-        "b": "GWOT Classics",
+        "b": "Flash Point",
+        "shared": 49
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "WMD",
+        "shared": 51
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Spiritus Invictus",
+        "shared": 51
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "JSOC",
+        "shared": 53
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "The Great Pasta Heist",
+        "shared": 15
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Dealer's Choice",
+        "shared": 64
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Flash Point",
+        "shared": 65
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "WMD",
+        "shared": 62
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Spiritus Invictus",
         "shared": 61
       },
       {
-        "a": "CYBERSAMI",
-        "b": "Dealer's Choice",
-        "shared": 46
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "Flash Point",
-        "shared": 43
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "WMD",
-        "shared": 43
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "Spiritus Invictus",
-        "shared": 44
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "JSOC",
-        "shared": 13
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Pastaslov",
-        "shared": 72
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "GWOT Classics",
-        "shared": 76
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Dealer's Choice",
-        "shared": 54
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Flash Point",
-        "shared": 50
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "WMD",
-        "shared": 50
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Spiritus Invictus",
-        "shared": 47
-      },
-      {
         "a": "HEAVY METAL",
         "b": "JSOC",
-        "shared": 22
+        "shared": 58
       },
       {
-        "a": "Pastaslov",
-        "b": "GWOT Classics",
-        "shared": 71
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Dealer's Choice",
-        "shared": 48
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Flash Point",
-        "shared": 49
-      },
-      {
-        "a": "Pastaslov",
-        "b": "WMD",
-        "shared": 44
-      },
-      {
-        "a": "Pastaslov",
-        "b": "Spiritus Invictus",
-        "shared": 49
-      },
-      {
-        "a": "Pastaslov",
-        "b": "JSOC",
-        "shared": 19
-      },
-      {
-        "a": "GWOT Classics",
-        "b": "Dealer's Choice",
-        "shared": 89
-      },
-      {
-        "a": "GWOT Classics",
-        "b": "Flash Point",
-        "shared": 80
-      },
-      {
-        "a": "GWOT Classics",
-        "b": "WMD",
-        "shared": 75
-      },
-      {
-        "a": "GWOT Classics",
-        "b": "Spiritus Invictus",
-        "shared": 68
-      },
-      {
-        "a": "GWOT Classics",
-        "b": "JSOC",
-        "shared": 29
+        "a": "HEAVY METAL",
+        "b": "The Great Pasta Heist",
+        "shared": 20
       },
       {
         "a": "Dealer's Choice",
         "b": "Flash Point",
-        "shared": 79
+        "shared": 99
       },
       {
         "a": "Dealer's Choice",
         "b": "WMD",
-        "shared": 78
+        "shared": 94
       },
       {
         "a": "Dealer's Choice",
         "b": "Spiritus Invictus",
-        "shared": 67
+        "shared": 87
       },
       {
         "a": "Dealer's Choice",
         "b": "JSOC",
-        "shared": 27
+        "shared": 87
+      },
+      {
+        "a": "Dealer's Choice",
+        "b": "The Great Pasta Heist",
+        "shared": 28
       },
       {
         "a": "Flash Point",
         "b": "WMD",
-        "shared": 81
+        "shared": 96
       },
       {
         "a": "Flash Point",
         "b": "Spiritus Invictus",
-        "shared": 80
+        "shared": 106
       },
       {
         "a": "Flash Point",
         "b": "JSOC",
-        "shared": 24
+        "shared": 102
+      },
+      {
+        "a": "Flash Point",
+        "b": "The Great Pasta Heist",
+        "shared": 25
       },
       {
         "a": "WMD",
         "b": "Spiritus Invictus",
-        "shared": 74
+        "shared": 96
       },
       {
         "a": "WMD",
         "b": "JSOC",
+        "shared": 93
+      },
+      {
+        "a": "WMD",
+        "b": "The Great Pasta Heist",
         "shared": 25
       },
       {
         "a": "Spiritus Invictus",
         "b": "JSOC",
-        "shared": 36
+        "shared": 121
+      },
+      {
+        "a": "Spiritus Invictus",
+        "b": "The Great Pasta Heist",
+        "shared": 26
+      },
+      {
+        "a": "JSOC",
+        "b": "The Great Pasta Heist",
+        "shared": 30
       }
     ],
     "newBlood": {
-      "crowdfund": "Flash Point",
-      "fresh": 32,
-      "of": 171,
-      "ageDays": 16
+      "crowdfund": "JSOC",
+      "fresh": 39,
+      "of": 205,
+      "ageDays": 12
     }
   },
   "destinations": [

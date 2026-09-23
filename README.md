@@ -6,7 +6,7 @@ A persistent panel tracking every crowdfund **Tier 1 Imports** has run — the G
 
 It answers the questions the Discord itself can no longer answer, because `#crowdfund-projects` keeps only the handful of posts currently on the board and roughly twenty `@everyone` links into it are dead:
 
-- What crowdfunds have there **been**? (at least 60, since the server opened in November 2024)
+- What crowdfunds have there **been**? (at least 61, since the server opened in November 2024)
 - How many people actually **supported** each one, as opposed to clicking 👍?
 - Where did it end up — public, the supporter armoury, or exclusive to that crowdfund's backers?
 - What did backers get *after* the vote? *(198 further drops across 11 crowdfunds, median 64 days.)*
@@ -18,14 +18,14 @@ citations is not linked for now.
 
 Two things widened the record on 2026-08-30, and one thing did not:
 
-- **Release votes: 40 of 60.** A Tier 1 moderator supplied vote tallies and supporter counts for 40
+- **Release votes: 40 of 61.** A Tier 1 moderator supplied vote tallies and supporter counts for 40
   crowdfunds, compiled by going through the confirmed channels by hand. They were checked against the
   11 votes this account can read first-hand and matched 11 for 11. Every figure is a crowdfund's own
   tally, never the summary sentence beside it.
-- **Destination: 48 of 60.** Where each crowdfund's output actually landed, reconstructed from public
+- **Destination: 49 of 61.** Where each crowdfund's output actually landed, reconstructed from public
   channels, Nexus and the supporter armoury. This is a broader and weaker claim than the vote, and not
   always the same answer, because some votes cover only part of a project.
-- **Delivery: still 11 of 60.** Drops happen inside a crowdfund's own supporter channel, leave no
+- **Delivery: still 11 of 61.** Drops happen inside a crowdfund's own supporter channel, leave no
   public trace, and nobody tallies them the way they tally a vote. These 11 are what a single
   supporter's account can see, and the panel says so above that section.
 
@@ -45,7 +45,7 @@ Add an object to `crowdfunds[]`:
 
 ```jsonc
 {
-  "n": 61,                    // running number
+  "n": 62,                    // running number
   "era": 2,                   // 1 = buy-in, 2 = the reaction-role era
   "date": "2026-09-14",
   "approx": false,            // true prints a ~ next to the date
