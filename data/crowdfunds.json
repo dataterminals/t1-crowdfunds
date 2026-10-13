@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-09-22",
+    "updated": "2026-10-13",
     "guild": "Tier 1 Imports",
     "guildId": "1302392670181916722",
     "note": "Era 1 is a recovered floor, not a count, and #6 and #8 are the same project counted twice — 24 rows, 23 distinct. System 2 is complete and, since 2026-08-24, completely named.",
@@ -1638,7 +1638,7 @@
       "creator": "SAMI TECH SUPUMA",
       "announced": "everyone",
       "live": true,
-      "signups": 234,
+      "signups": 245,
       "items": [
         "Cyberpunk Character.",
         "Medical Mask.",
@@ -1726,7 +1726,7 @@
       "creator": "MercerBlack™",
       "announced": "everyone",
       "live": true,
-      "signups": 213,
+      "signups": 226,
       "items": [
         "Kawasaki 125cc Dirtbike",
         "KTM 1390 Super Duke 2026",
@@ -1750,7 +1750,13 @@
         "CZ P-09 C NOCTURNE",
         "A full Military Uniform"
       ],
-      "note": "Its post left the board between 2026-09-10 and 2026-09-22; the sign-up count is the last one read before it came down. No public release seen as of 2026-09-22."
+      "note": "Its post left the board between 2026-09-10 and 2026-09-22; the sign-up count is the last one read before it came down.",
+      "destination": {
+        "where": "public",
+        "confidence": "strong",
+        "src": "1555619458066812948",
+        "note": "Released 2026-10-02 to #mod-releases by the creator, as two Nexus mods: Pastaslov - Gear (the uniform and THOR vest) and Pastaslov - Weaponry (the rifle and handgun). The vote itself is not readable from this account; chat calls some of the gear exclusive."
+      }
     },
     {
       "n": 52,
@@ -1841,7 +1847,7 @@
       "creator": "Avetis",
       "announced": "everyone",
       "live": true,
-      "signups": 214,
+      "signups": 252,
       "items": [
         "LR308",
         "SRSA2",
@@ -1861,13 +1867,13 @@
       "creator": "𝐵𝑂𝑁𝐹𝐼𝑅𝐸",
       "announced": "everyone",
       "live": true,
-      "note": "Announced as “Another Bonfire Masterclass”. This creator’s third crowdfund, after Dual Sig and Blackbird.",
+      "note": "Announced as “Another Bonfire Masterclass”. This creator’s third crowdfund, after Dual Sig and Blackbird. Its release vote was run on 2026-10-11; the result is not public yet.",
       "src": "1541702858146320394",
       "items": [
         "Spiritus Systems LV-119, choose your loadout",
         "FN Five-Seven MK3 Switchable Sight"
       ],
-      "signups": 214
+      "signups": 247
     },
     {
       "n": 57,
@@ -1886,7 +1892,7 @@
         "Daniel Defence RIS III",
         "MCX Spear XM7"
       ],
-      "signups": 193,
+      "signups": 221,
       "src": "1541885741859078318"
     },
     {
@@ -1924,7 +1930,7 @@
         "S&S Precision Belt-M"
       ],
       "live": true,
-      "signups": 216
+      "signups": 276
     },
     {
       "n": 60,
@@ -1942,7 +1948,7 @@
         "Spiritus Systems Delta Backpack"
       ],
       "live": true,
-      "signups": 205
+      "signups": 284
     },
     {
       "n": 61,
@@ -1962,195 +1968,195 @@
         "Spiffy Suit"
       ],
       "live": true,
-      "signups": 45
+      "signups": 150
     }
   ],
   "cohort": {
-    "asOf": "2026-09-22",
+    "asOf": "2026-10-13",
     "basis": "Exact reactor lists for the 8 crowdfunds live on this date, with the T1 Carl bot removed.",
-    "distinct": 782,
-    "signups": 1534,
+    "distinct": 922,
+    "signups": 1901,
     "buckets": [
       {
         "label": "1 of 8",
-        "people": 481
+        "people": 547
       },
       {
         "label": "2 of 8",
-        "people": 132
+        "people": 155
       },
       {
         "label": "3 of 8",
-        "people": 55
+        "people": 69
       },
       {
         "label": "4 of 8",
-        "people": 35
+        "people": 52
       },
       {
         "label": "5 of 8",
-        "people": 30
+        "people": 32
       },
       {
         "label": "6 of 8",
-        "people": 19
+        "people": 23
       },
       {
         "label": "7 of 8",
-        "people": 20
+        "people": 21
       },
       {
         "label": "8 of 8",
-        "people": 10
+        "people": 23
       }
     ],
     "pairwise": [
       {
         "a": "CYBERSAMI",
         "b": "HEAVY METAL",
-        "shared": 70
+        "shared": 76
       },
       {
         "a": "CYBERSAMI",
         "b": "Dealer's Choice",
+        "shared": 66
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "Flash Point",
         "shared": 58
       },
       {
         "a": "CYBERSAMI",
-        "b": "Flash Point",
-        "shared": 49
-      },
-      {
-        "a": "CYBERSAMI",
         "b": "WMD",
-        "shared": 51
+        "shared": 57
       },
       {
         "a": "CYBERSAMI",
         "b": "Spiritus Invictus",
-        "shared": 51
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "JSOC",
-        "shared": 53
-      },
-      {
-        "a": "CYBERSAMI",
-        "b": "The Great Pasta Heist",
-        "shared": 15
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Dealer's Choice",
-        "shared": 64
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "Flash Point",
-        "shared": 65
-      },
-      {
-        "a": "HEAVY METAL",
-        "b": "WMD",
         "shared": 62
       },
       {
+        "a": "CYBERSAMI",
+        "b": "JSOC",
+        "shared": 65
+      },
+      {
+        "a": "CYBERSAMI",
+        "b": "The Great Pasta Heist",
+        "shared": 41
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Dealer's Choice",
+        "shared": 75
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "Flash Point",
+        "shared": 72
+      },
+      {
+        "a": "HEAVY METAL",
+        "b": "WMD",
+        "shared": 72
+      },
+      {
         "a": "HEAVY METAL",
         "b": "Spiritus Invictus",
-        "shared": 61
+        "shared": 76
       },
       {
         "a": "HEAVY METAL",
         "b": "JSOC",
-        "shared": 58
+        "shared": 71
       },
       {
         "a": "HEAVY METAL",
         "b": "The Great Pasta Heist",
-        "shared": 20
+        "shared": 48
       },
       {
         "a": "Dealer's Choice",
         "b": "Flash Point",
-        "shared": 99
+        "shared": 115
       },
       {
         "a": "Dealer's Choice",
         "b": "WMD",
-        "shared": 94
+        "shared": 114
       },
       {
         "a": "Dealer's Choice",
         "b": "Spiritus Invictus",
-        "shared": 87
+        "shared": 114
       },
       {
         "a": "Dealer's Choice",
         "b": "JSOC",
-        "shared": 87
+        "shared": 115
       },
       {
         "a": "Dealer's Choice",
         "b": "The Great Pasta Heist",
-        "shared": 28
+        "shared": 71
       },
       {
         "a": "Flash Point",
         "b": "WMD",
-        "shared": 96
+        "shared": 109
       },
       {
         "a": "Flash Point",
         "b": "Spiritus Invictus",
-        "shared": 106
+        "shared": 131
       },
       {
         "a": "Flash Point",
         "b": "JSOC",
-        "shared": 102
+        "shared": 125
       },
       {
         "a": "Flash Point",
         "b": "The Great Pasta Heist",
-        "shared": 25
+        "shared": 65
       },
       {
         "a": "WMD",
         "b": "Spiritus Invictus",
-        "shared": 96
+        "shared": 120
       },
       {
         "a": "WMD",
         "b": "JSOC",
-        "shared": 93
+        "shared": 115
       },
       {
         "a": "WMD",
         "b": "The Great Pasta Heist",
-        "shared": 25
+        "shared": 67
       },
       {
         "a": "Spiritus Invictus",
         "b": "JSOC",
-        "shared": 121
+        "shared": 165
       },
       {
         "a": "Spiritus Invictus",
         "b": "The Great Pasta Heist",
-        "shared": 26
+        "shared": 77
       },
       {
         "a": "JSOC",
         "b": "The Great Pasta Heist",
-        "shared": 30
+        "shared": 82
       }
     ],
     "newBlood": {
-      "crowdfund": "JSOC",
-      "fresh": 39,
-      "of": 205,
-      "ageDays": 12
+      "crowdfund": "The Great Pasta Heist",
+      "fresh": 40,
+      "of": 150,
+      "ageDays": 21
     }
   },
   "destinations": [

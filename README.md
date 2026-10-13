@@ -22,7 +22,7 @@ Two things widened the record on 2026-08-30, and one thing did not:
   crowdfunds, compiled by going through the confirmed channels by hand. They were checked against the
   11 votes this account can read first-hand and matched 11 for 11. Every figure is a crowdfund's own
   tally, never the summary sentence beside it.
-- **Destination: 49 of 61.** Where each crowdfund's output actually landed, reconstructed from public
+- **Destination: 50 of 61.** Where each crowdfund's output actually landed, reconstructed from public
   channels, Nexus and the supporter armoury. This is a broader and weaker claim than the vote, and not
   always the same answer, because some votes cover only part of a project.
 - **Delivery: still 11 of 61.** Drops happen inside a crowdfund's own supporter channel, leave no
